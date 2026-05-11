@@ -40,13 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog.apps.BlogConfig',
-    'taggit',
-    'django.contrib.sites',
-    'django.contrib.sitemaps',
-    'django.contrib.postgres',
-    'accounts.apps.AccountsConfig',
-    
+    'main.apps.MainConfig',
+    'catalog.apps.CatalogConfig',
+    'news.apps.NewsConfig',
+    'contacts.apps.ContactsConfig',
 ]
 
 MIDDLEWARE = [
@@ -84,12 +81,15 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config('DB_NAME'),
-        'USER': config('DB_USER'),
-        'PASSWORD': config('DB_PASSWORD'),
-        'HOST': config('DB_HOST', default='127.0.0.1'),
-        'PORT': config('DB_PORT', default='5432'),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+        #'NAME': config('DB_NAME'),
+        #'ENGINE': 'django.db.backends.postgresql',
+        #'NAME': config('DB_NAME'),
+        #'USER': config('DB_USER'),
+        #'PASSWORD': config('DB_PASSWORD'),
+        #'HOST': config('DB_HOST', default='127.0.0.1'),
+        #'PORT': config('DB_PORT', default='5432'),
     }
 }
 
@@ -116,7 +116,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/6.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-RU'
+
+USE_I18N = True
 
 TIME_ZONE = 'UTC'
 
@@ -140,3 +142,5 @@ LOGIN_URL = '/accounts/login/'
 
 MEDIA_ROOT = BASE_DIR / 'media'
 MEDIA_URL = 'media/'
+
+STATICFILES_DIRS = [BASE_DIR / 'static']
