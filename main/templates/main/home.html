@@ -1,0 +1,442 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Главная — АгроПрессОйл{% endblock %}
+{% block content %}
+
+<!-- ============================================ -->
+<!-- ============== HERO ======================== -->
+<!-- ============================================ -->
+<section class="bg-[#f5f6f8] pt-6 pb-6">
+  <div class="max-w-[1280px] mx-auto px-4 lg:px-8">
+    <div class="relative overflow-hidden rounded-2xl shadow-2xl">
+      <img
+        src="{% static 'images/hero.webp' %}"
+        alt="Запасные части для маслопрессов — собственное производство и ремонт"
+        loading="eager"
+        decoding="async"
+        fetchpriority="high"
+        class="block w-full h-[450px] object-cover object-[50%_80%] select-none"
+      />
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- =========== СЕКЦИЯ 1: КАТАЛОГ ============== -->
+<!-- ============================================ -->
+<section class="max-w-[1280px] mx-auto px-8 pt-0 pb-12">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+    {% include "includes/catalog.html" %}
+  </div>
+
+  <!-- Полоска преимуществ под карточками -->
+  <div
+    class="mt-8 bg-white border border-[#e4e7ec] rounded-lg p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+  >
+    <div class="flex items-start gap-3.5">
+      <span
+        class="shrink-0 w-10 h-10 grid place-items-center rounded bg-[#fff1ea] text-[var(--accent)]"
+      >
+        <svg
+          class="w-5 h-5"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M9 12l2 2 4-4M21 12c0 5-9 9-9 9s-9-4-9-9V5l9-3 9 3v7z"
+          />
+        </svg>
+      </span>
+      <div>
+        <strong class="block text-sm font-bold text-[var(--navy)] mb-0.5"
+          >Гарантия качества</strong
+        >
+        <span class="text-xs text-[#5c6675] leading-relaxed"
+          >Контроль ОТК на&nbsp;всех этапах производства</span
+        >
+      </div>
+    </div>
+    <div class="flex items-start gap-3.5">
+      <span
+        class="shrink-0 w-10 h-10 grid place-items-center rounded bg-[#fff1ea] text-[var(--accent)]"
+      >
+        <svg
+          class="w-5 h-5"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+          />
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"
+          />
+        </svg>
+      </span>
+      <div>
+        <strong class="block text-sm font-bold text-[var(--navy)] mb-0.5"
+          >Собственное производство</strong
+        >
+        <span class="text-xs text-[#5c6675] leading-relaxed"
+          >Полный цикл изготовления на&nbsp;своём заводе</span
+        >
+      </div>
+    </div>
+    <div class="flex items-start gap-3.5">
+      <span
+        class="shrink-0 w-10 h-10 grid place-items-center rounded bg-[#fff1ea] text-[var(--accent)]"
+      >
+        <svg
+          class="w-5 h-5"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M17 8l4 4-4 4M3 12h18M7 16l-4-4 4-4"
+          />
+        </svg>
+      </span>
+      <div>
+        <strong class="block text-sm font-bold text-[var(--navy)] mb-0.5"
+          >Доставка по&nbsp;РФ и&nbsp;СНГ</strong
+        >
+        <span class="text-xs text-[#5c6675] leading-relaxed"
+          >Отгрузка ходовых позиций за&nbsp;3–5 дней</span
+        >
+      </div>
+    </div>
+    <div class="flex items-start gap-3.5">
+      <span
+        class="shrink-0 w-10 h-10 grid place-items-center rounded bg-[#fff1ea] text-[var(--accent)]"
+      >
+        <svg
+          class="w-5 h-5"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <circle cx="12" cy="12" r="10" />
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4.93 4.93l4.24 4.24M14.83 14.83l4.24 4.24M14.83 9.17l4.24-4.24M14.83 9.17l3.53-3.53M4.93 19.07l4.24-4.24"
+          />
+        </svg>
+      </span>
+      <div>
+        <strong class="block text-sm font-bold text-[var(--navy)] mb-0.5"
+          >Техническая поддержка</strong
+        >
+        <span class="text-xs text-[#5c6675] leading-relaxed"
+          >Консультация инженеров на&nbsp;всех этапах</span
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- =========== СЕКЦИЯ 2: РЕМОНТ =============== -->
+<!-- ============================================ -->
+
+{% include "includes/repair.html" %}
+
+<!-- ============================================ -->
+<!-- =========== СЕКЦИЯ 3: ПРОЦЕСС ============== -->
+<!-- ============================================ -->
+<section class="relative overflow-hidden" style="background: linear-gradient(115deg, #0e1e3a 0%, #1a2f5a 60%, #0e1e3a 100%);">
+  <!-- Декор-сетка -->
+  <div class="absolute inset-0 opacity-[0.05]" style="background-image: linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px); background-size: 40px 40px;"></div>
+
+  <div class="max-w-[1280px] mx-auto px-8 py-12 relative">
+    <div class="mb-8">
+      <span
+        class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-[#ff8a4d] mb-2"
+      >
+        <span class="w-7 h-0.5 bg-[var(--accent)]"></span>
+        Процесс
+      </span>
+      <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight text-white">
+        Как проходит ремонт от&nbsp;заявки до&nbsp;отгрузки
+      </h2>
+    </div>
+
+    <!-- Шаги -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5 relative">
+      <!-- Линия (декоративная) -->
+      <div
+        class="hidden lg:block absolute top-5 left-5 right-5 h-px bg-white/10"
+        aria-hidden="true"
+      ></div>
+
+      <!-- 01 -->
+      <div class="relative">
+        <div
+          class="w-10 h-10 rounded-full bg-[var(--accent)] grid place-items-center font-mono font-bold text-white text-sm mb-3 relative z-10"
+        >
+          01
+        </div>
+        <h4 class="text-sm font-bold text-white mb-1.5">
+          Заявка и&nbsp;диагностика
+        </h4>
+        <p class="text-xs text-white/65 leading-relaxed mb-2">
+          Принимаем оборудование на&nbsp;дефектовку, составляем акт технического состояния.
+        </p>
+        <span
+          class="inline-block text-[10px] font-bold uppercase tracking-wider text-[#ff8a4d]"
+          >1–2 дня</span
+        >
+      </div>
+      <!-- 02 -->
+      <div class="relative">
+        <div
+          class="w-10 h-10 rounded-full bg-[var(--accent)] grid place-items-center font-mono font-bold text-white text-sm mb-3 relative z-10"
+        >
+          02
+        </div>
+        <h4 class="text-sm font-bold text-white mb-1.5">
+          Смета и&nbsp;договор
+        </h4>
+        <p class="text-xs text-white/65 leading-relaxed mb-2">
+          Согласовываем перечень работ, материалы, сроки. Подписываем договор.
+        </p>
+        <span
+          class="inline-block text-[10px] font-bold uppercase tracking-wider text-[#ff8a4d]"
+          >1 день</span
+        >
+      </div>
+      <!-- 03 -->
+      <div class="relative">
+        <div
+          class="w-10 h-10 rounded-full bg-[var(--accent)] grid place-items-center font-mono font-bold text-white text-sm mb-3 relative z-10"
+        >
+          03
+        </div>
+        <h4 class="text-sm font-bold text-white mb-1.5">Ремонт</h4>
+        <p class="text-xs text-white/65 leading-relaxed mb-2">
+          Работы на&nbsp;собственной площадке: токарка, термообработка, сварка, сборка.
+        </p>
+        <span
+          class="inline-block text-[10px] font-bold uppercase tracking-wider text-[#ff8a4d]"
+          >от&nbsp;5 дней</span
+        >
+      </div>
+      <!-- 04 -->
+      <div class="relative">
+        <div
+          class="w-10 h-10 rounded-full bg-[var(--accent)] grid place-items-center font-mono font-bold text-white text-sm mb-3 relative z-10"
+        >
+          04
+        </div>
+        <h4 class="text-sm font-bold text-white mb-1.5">
+          Испытания и&nbsp;ОТК
+        </h4>
+        <p class="text-xs text-white/65 leading-relaxed mb-2">
+          Проверка геометрии, ход под&nbsp;нагрузкой, опрессовка чанов. Акт ОТК.
+        </p>
+        <span
+          class="inline-block text-[10px] font-bold uppercase tracking-wider text-[#ff8a4d]"
+          >1 день</span
+        >
+      </div>
+      <!-- 05 -->
+      <div class="relative">
+        <div
+          class="w-10 h-10 rounded-full bg-[var(--accent)] grid place-items-center font-mono font-bold text-white text-sm mb-3 relative z-10"
+        >
+          05
+        </div>
+        <h4 class="text-sm font-bold text-white mb-1.5">Отгрузка</h4>
+        <p class="text-xs text-white/65 leading-relaxed mb-2">
+          Передаём оборудование с&nbsp;паспортом, актом и&nbsp;гарантийным талоном на&nbsp;12&nbsp;мес.
+        </p>
+        <span
+          class="inline-block text-[10px] font-bold uppercase tracking-wider text-[#ff8a4d]"
+          >по&nbsp;факту</span
+        >
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- ========= СЕКЦИЯ 4: ПРОИЗВОДСТВО ========= -->
+<!-- ============================================ -->
+<section class="bg-white py-20">
+  <div class="max-w-[1280px] mx-auto px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+
+      <!-- Левая часть: текст и список -->
+      <div class="flex flex-col">
+        <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-[var(--accent)] mb-3">
+          <span class="w-7 h-0.5 bg-[var(--accent)]"></span>
+          Производство
+        </span>
+        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-[var(--navy)] mb-3 leading-tight">
+          Полный цикл изготовления на&nbsp;собственной площадке
+        </h2>
+        <p class="text-base text-[#5c6675] leading-relaxed mb-6">
+          Цех в&nbsp;Краснодаре. Парк станочного оборудования, термообработка, аргонодуговая сварка, отдел контроля качества. Под&nbsp;каждое изделие — индивидуальная маршрутная карта и&nbsp;ОТК.
+        </p>
+
+        <!-- Список участков -->
+        <ul class="divide-y divide-[#e4e7ec] border-t border-[#e4e7ec]">
+          <li class="py-3 flex gap-4">
+            <span class="font-mono text-sm font-bold text-[var(--accent)] shrink-0 w-7">01</span>
+            <div>
+              <strong class="block text-base font-bold text-[var(--navy)] mb-0.5">Заготовительный участок</strong>
+              <span class="text-sm text-[#5c6675]">Гильотины, ленточно-отрезные станки, плазменная резка</span>
+            </div>
+          </li>
+          <li class="py-3 flex gap-4">
+            <span class="font-mono text-sm font-bold text-[var(--accent)] shrink-0 w-7">02</span>
+            <div>
+              <strong class="block text-base font-bold text-[var(--navy)] mb-0.5">Механический участок</strong>
+              <span class="text-sm text-[#5c6675]">Токарные, фрезерные, расточные станки, ЧПУ</span>
+            </div>
+          </li>
+          <li class="py-3 flex gap-4">
+            <span class="font-mono text-sm font-bold text-[var(--accent)] shrink-0 w-7">03</span>
+            <div>
+              <strong class="block text-base font-bold text-[var(--navy)] mb-0.5">Термообработка</strong>
+              <span class="text-sm text-[#5c6675]">Отжиг, цементация, закалка, отпуск</span>
+            </div>
+          </li>
+          <li class="py-3 flex gap-4">
+            <span class="font-mono text-sm font-bold text-[var(--accent)] shrink-0 w-7">04</span>
+            <div>
+              <strong class="block text-base font-bold text-[var(--navy)] mb-0.5">Сварочный участок</strong>
+              <span class="text-sm text-[#5c6675]">Электродуговая и&nbsp;аргонодуговая сварка</span>
+            </div>
+          </li>
+          <li class="py-3 flex gap-4">
+            <span class="font-mono text-sm font-bold text-[var(--accent)] shrink-0 w-7">05</span>
+            <div>
+              <strong class="block text-base font-bold text-[var(--navy)] mb-0.5">Сборка и&nbsp;ОТК</strong>
+              <span class="text-sm text-[#5c6675]">Контроль геометрии, испытания, паспорт изделия</span>
+            </div>
+          </li>
+          <li class="py-3 flex gap-4">
+            <span class="font-mono text-sm font-bold text-[var(--accent)] shrink-0 w-7">06</span>
+            <div>
+              <strong class="block text-base font-bold text-[var(--navy)] mb-0.5">Покраска и&nbsp;антикоррозийная защита</strong>
+              <span class="text-sm text-[#5c6675]">Дробеструйная очистка, грунтовка, эмаль промышленная</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Правая часть: коллаж фото + метрики -->
+      <div class="flex flex-col gap-3">
+
+        <!-- Фото -->
+        <div class="p-4 bg-[#f5f6f8] rounded-lg">
+          <div class="grid grid-cols-2 gap-3">
+
+            <div class="group relative aspect-square bg-slate-200 rounded-lg overflow-hidden shadow-sm">
+              <img src="{% static 'images/production/1.png' %}" alt=""
+                  onerror="this.style.display='none'" loading="lazy" decoding="async"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-black/20"></div>
+            </div>
+
+            <div class="group relative aspect-square bg-slate-200 rounded-lg overflow-hidden shadow-sm">
+              <img src="{% static 'images/production/2.png' %}" alt=""
+                  onerror="this.style.display='none'" loading="lazy" decoding="async"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-black/20"></div>
+            </div>
+
+            <div class="group relative aspect-square bg-slate-200 rounded-lg overflow-hidden shadow-sm">
+              <img src="{% static 'images/production/3.png' %}" alt=""
+                  onerror="this.style.display='none'" loading="lazy" decoding="async"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-black/20"></div>
+            </div>
+
+            <div class="group relative aspect-square bg-slate-200 rounded-lg overflow-hidden shadow-sm">
+              <img src="{% static 'images/production/4.png' %}" alt=""
+                  onerror="this.style.display='none'" loading="lazy" decoding="async"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-black/20"></div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Метрики — под фото -->
+        <div class="grid grid-cols-2 gap-3">
+          <div class="border border-[#e4e7ec] rounded-lg p-4">
+            <strong class="block font-mono text-3xl font-bold text-[var(--navy)] leading-none mb-1.5">16<sup class="text-base text-[var(--accent)]">+</sup></strong>
+            <span class="block text-[11px] font-bold uppercase tracking-wider text-[#5c6675]">лет работы предприятия</span>
+          </div>
+          <div class="border border-[#e4e7ec] rounded-lg p-4">
+            <strong class="block font-mono text-3xl font-bold text-[var(--navy)] leading-none mb-1.5">500<sup class="text-base text-[var(--accent)]">+</sup></strong>
+            <span class="block text-[11px] font-bold uppercase tracking-wider text-[#5c6675]">отремонтированных единиц</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ============================================ -->
+<!-- =========== СЕКЦИЯ 5: НОВОСТИ ============== -->
+<!-- ============================================ -->
+<section class="bg-[#f5f6f8] py-16">
+  <div class="max-w-[1280px] mx-auto px-8">
+    <div class="flex flex-wrap items-end justify-between gap-6 mb-10">
+      <div>
+        <span
+          class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-[var(--accent)] mb-3"
+        >
+          <span class="w-7 h-0.5 bg-[var(--accent)]"></span>
+          Новости
+        </span>
+        <h2
+          class="text-3xl md:text-4xl font-extrabold tracking-tight text-[var(--navy)] mb-2"
+        >
+          Последние&nbsp;события
+        </h2>
+        <p class="text-base text-[#5c6675]">
+          Отгрузки, ремонт, фото с&nbsp;производства.
+        </p>
+      </div>
+      <a
+        href="{% url 'news' %}"
+        class="inline-flex items-center gap-2 text-sm font-semibold text-[var(--accent)] hover:text-[var(--accent-hover)]"
+      >
+        Все новости
+        <svg class="w-3.5 h-3.5"><use href="#icon-arrow" /></svg>
+      </a>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
+      {% include "includes/news.html" %}
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- =========== СЕКЦИЯ 6: CTA / ФОРМА ========== -->
+<!-- ============================================ -->
+{% include "includes/contacts.html" %}
+
+{% endblock %}
