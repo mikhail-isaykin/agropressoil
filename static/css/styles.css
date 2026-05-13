@@ -1,0 +1,19 @@
+:root {
+  --accent: #e8541c;
+  --accent-hover: #c8430f;
+  --navy: #0e1e3a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-mono {
+  font-family: "JetBrains Mono", monospace;
+}
