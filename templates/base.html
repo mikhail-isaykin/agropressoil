@@ -1,0 +1,96 @@
+{% load static %}
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}АгроПрессОйл{% endblock %}</title>
+
+    <!-- SEO -->
+    <meta
+      name="description"
+      content="Производство и ремонт оборудования для маслозаводов: маслопрессы МП-68, А9-МПШ, М8-МШП, жаровни, вальцевые станки. Запчасти. Капремонт. Усть-Лабинск."
+    />
+    <meta
+      name="keywords"
+      content="маслопресс, МП-68, А9-МПШ, жаровни, запчасти маслопресс, ремонт маслопресса, маслозавод"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0e1e3a" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="АгроПрессОйл — Производство оборудования для маслозаводов"
+    />
+    <meta
+      property="og:description"
+      content="Производство и ремонт маслопрессов, жаровен, запчастей. Усть-Лабинск."
+    />
+    <meta property="og:locale" content="ru_RU" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  </head>
+
+  <body class="bg-[#f5f6f8] text-[#1a1f2b]">
+    <!-- SVG symbols -->
+    <svg style="display: none" aria-hidden="true">
+      <defs>
+        <symbol
+          id="icon-arrow"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke-width="2" d="M5 12h14M12 5l7 7-7 7" />
+        </symbol>
+        <symbol
+          id="icon-arrow-thick"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke-width="2.5" d="M5 12h14M12 5l7 7-7 7" />
+        </symbol>
+      </defs>
+    </svg>
+    {% include "partials/topbar.html" %}
+    {% include "partials/header.html" %}
+    {% if messages %}
+      {% for message in messages %}
+      <div class="bg-[var(--navy)] px-8 py-4">
+        <div class="max-w-[1280px] mx-auto flex items-center gap-4">
+          <span class="shrink-0 w-9 h-9 grid place-items-center rounded-full bg-[var(--accent)] text-white">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+            </svg>
+          </span>
+          <div>
+            <strong class="block text-sm font-bold text-white">{{ message }}</strong>
+            <span class="text-sm text-white/70">Перезвоним в течение дня в рабочее время.</span>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    {% endif %}
+    {%block content %}{% endblock %}
+    {% include "partials/footer.html" %}
+  </body>
+</html>

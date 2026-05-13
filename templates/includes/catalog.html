@@ -1,0 +1,38 @@
+{% for category in catalog %}
+  <a href="{% url 'category' category_slug=category.slug %}"
+    class="group relative block overflow-hidden rounded-lg cursor-pointer aspect-[4/5] bg-slate-100 shadow-sm hover:shadow-xl transition-shadow duration-300"
+  >
+    <img
+      src="{{ category.image.url }}"
+      alt="{{ category.title }}"
+      onerror="this.style.display = 'none'"
+      loading="lazy"
+      decoding="async"
+      class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+    />
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"
+    ></div>
+    <div class="absolute inset-x-0 bottom-0 p-6 text-white">
+      <h3 class="text-2xl md:text-3xl font-bold tracking-tight">
+        {{ category.title }}
+      </h3>
+      <div
+        class="mt-2 flex items-center justify-between text-sm text-white/85"
+      >
+        <span>
+          {% if category.slug == 'maslopress' %}3 модели в&nbsp;каталоге
+          {% elif category.slug == 'zharovnya' %}1 модель в&nbsp;каталоге
+          {% else %}Вальцевые станки, нории, запчасти
+          {% endif %}
+        </span>
+        <span
+          class="inline-flex items-center gap-1 font-semibold text-[#ff7a3d] transition-transform group-hover:translate-x-1"
+        >
+          Смотреть
+          <svg class="w-3.5 h-3.5"><use href="#icon-arrow-thick" /></svg>
+        </span>
+      </div>
+    </div>
+  </a>
+{% endfor %}

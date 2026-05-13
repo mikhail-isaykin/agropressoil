@@ -1,0 +1,199 @@
+<!-- ============================================ -->
+<!-- =========== СТРАНИЦА: О КОМПАНИИ =========== -->
+<!-- ============================================ -->
+{% extends "base.html" %}
+{% block title %}О компании — АгроПрессОйл{% endblock %}
+{% block content %}
+
+<!-- ============================================ -->
+<!-- ============== ШАПКА СТРАНИЦЫ ============== -->
+<!-- ============================================ -->
+<section class="relative overflow-hidden" style="background: linear-gradient(115deg, #0e1e3a 0%, #1a2f5a 60%, #0e1e3a 100%);">
+  <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[var(--accent)] to-transparent"></div>
+  <div class="absolute inset-0 opacity-[0.05]" style="background-image: linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px); background-size: 40px 40px;"></div>
+
+  <div class="max-w-[1280px] mx-auto px-8 py-7 relative">
+    <nav class="flex items-center gap-2 text-sm text-white/50 mb-3">
+      <a href="{% url 'home' %}" class="hover:text-white transition-colors">Главная</a>
+      <svg class="w-3 h-3 opacity-50" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+      </svg>
+      <span class="text-white/90">О компании</span>
+    </nav>
+
+    <div class="flex flex-wrap items-end justify-between gap-6">
+      <div>
+        <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-[#ff8a4d] mb-2">
+          <span class="w-7 h-0.5 bg-[var(--accent)]"></span>
+          О компании
+        </span>
+        <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight text-white mb-1">
+          АГРОПРЕССОЙЛ
+        </h1>
+        <p class="text-base text-white/65 max-w-2xl">
+          Производство оборудования и&nbsp;запасных частей для&nbsp;маслозаводов с&nbsp;2009&nbsp;года.
+        </p>
+      </div>
+      <div class="text-sm text-white/60">
+        <span class="block text-[11px] uppercase tracking-wider text-white/40 mb-0.5">На&nbsp;рынке</span>
+        <strong class="font-mono text-white text-2xl">16<sup class="text-base text-[var(--accent)]">+</sup> лет</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- ============== СОДЕРЖИМОЕ ================== -->
+<!-- ============================================ -->
+<section class="bg-[#f5f6f8] py-12">
+  <div class="max-w-[1280px] mx-auto px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-8 items-start">
+
+      <!-- ============ ТЕКСТ ============ -->
+      <article class="bg-white rounded-lg border border-[#e4e7ec] overflow-hidden">
+
+        <!-- Лид-блок с тёмной плашкой "С 2009 года" -->
+        <div class="p-8 lg:p-10 border-b border-[#e4e7ec]">
+          <div class="inline-flex items-center gap-3 mb-5">
+            <div class="flex items-baseline gap-1 px-3 py-1.5 bg-[var(--navy)] rounded">
+              <span class="font-mono text-2xl font-bold text-white leading-none">2009</span>
+              <span class="text-[10px] uppercase tracking-wider text-white/60 ml-1">год основания</span>
+            </div>
+          </div>
+          <p class="text-lg md:text-xl text-[var(--navy)] leading-relaxed font-medium">
+            Мы&nbsp;проектируем и&nbsp;изготавливаем оборудование для&nbsp;маслоперерабатывающих предприятий. За&nbsp;это время накоплен <strong class="text-[var(--accent)]">реальный производственный опыт</strong>&nbsp;— от&nbsp;единичных запасных частей до&nbsp;комплектных линий.
+          </p>
+        </div>
+
+        <!-- Что выпускаем -->
+        <div class="p-8 lg:p-10 border-b border-[#e4e7ec]">
+          <h2 class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.16em] text-[var(--accent)] mb-5">
+            <span class="w-7 h-0.5 bg-[var(--accent)]"></span>
+            Что мы&nbsp;выпускаем
+          </h2>
+
+          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-5">
+            <li class="flex items-center gap-3 p-3 bg-[#f5f6f8] rounded">
+              <span class="w-8 h-8 grid place-items-center rounded bg-[var(--accent)]/10 text-[var(--accent)] shrink-0">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" d="M12 7v10M7 12h10"/></svg>
+              </span>
+              <span class="font-semibold text-[var(--navy)] text-sm">Маслопрессы</span>
+            </li>
+            <li class="flex items-center gap-3 p-3 bg-[#f5f6f8] rounded">
+              <span class="w-8 h-8 grid place-items-center rounded bg-[var(--accent)]/10 text-[var(--accent)] shrink-0">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" d="M12 7v10M7 12h10"/></svg>
+              </span>
+              <span class="font-semibold text-[var(--navy)] text-sm">Жаровни</span>
+            </li>
+            <li class="flex items-center gap-3 p-3 bg-[#f5f6f8] rounded">
+              <span class="w-8 h-8 grid place-items-center rounded bg-[var(--accent)]/10 text-[var(--accent)] shrink-0">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" d="M12 7v10M7 12h10"/></svg>
+              </span>
+              <span class="font-semibold text-[var(--navy)] text-sm">Вальцевые станки</span>
+            </li>
+            <li class="flex items-center gap-3 p-3 bg-[#f5f6f8] rounded">
+              <span class="w-8 h-8 grid place-items-center rounded bg-[var(--accent)]/10 text-[var(--accent)] shrink-0">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" d="M12 7v10M7 12h10"/></svg>
+              </span>
+              <span class="font-semibold text-[var(--navy)] text-sm">Семенорушильные машины</span>
+            </li>
+            <li class="flex items-center gap-3 p-3 bg-[#f5f6f8] rounded">
+              <span class="w-8 h-8 grid place-items-center rounded bg-[var(--accent)]/10 text-[var(--accent)] shrink-0">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" d="M12 7v10M7 12h10"/></svg>
+              </span>
+              <span class="font-semibold text-[var(--navy)] text-sm">Редукторы</span>
+            </li>
+            <li class="flex items-center gap-3 p-3 bg-[#f5f6f8] rounded">
+              <span class="w-8 h-8 grid place-items-center rounded bg-[var(--accent)]/10 text-[var(--accent)] shrink-0">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" d="M12 7v10M7 12h10"/></svg>
+              </span>
+              <span class="font-semibold text-[var(--navy)] text-sm">Конвейеры всех типов</span>
+            </li>
+          </ul>
+
+          <p class="text-sm text-[#5c6675] leading-relaxed">
+            Конвейеры&nbsp;— ленточные стационарные и&nbsp;передвижные, скребковые цепные, винтовые, питатели и&nbsp;ковшовые элеваторы (<strong class="text-[var(--navy)]">ширина ковша до&nbsp;1000&nbsp;мм</strong>).
+          </p>
+        </div>
+
+        <!-- Преимущество -->
+        <div class="p-8 lg:p-10 bg-[#f5f6f8]/40">
+          <h2 class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.16em] text-[var(--accent)] mb-4">
+            <span class="w-7 h-0.5 bg-[var(--accent)]"></span>
+            Наш подход
+          </h2>
+
+          <blockquote class="border-l-2 border-[var(--accent)] pl-5 mb-5">
+            <p class="text-base text-[var(--navy)] leading-relaxed italic">
+              «Инженеры компании постоянно следят за&nbsp;развитием отрасли&nbsp;— это позволяет выпускать конкурентоспособное и&nbsp;надёжное оборудование».
+            </p>
+          </blockquote>
+
+          <p class="text-sm text-[#5c6675] leading-relaxed">
+            Широкая номенклатура позволяет отгружать стандартные позиции сразу со&nbsp;склада; на&nbsp;каждую партию выдаётся <strong class="text-[var(--navy)]">паспорт по&nbsp;ГОСТ</strong>.
+          </p>
+        </div>
+      </article>
+
+      <!-- ============ САЙДБАР: СТАТИСТИКА ============ -->
+      <aside class="space-y-4 lg:sticky lg:top-6">
+        <!-- Тёмная карточка с главной цифрой -->
+        <div class="relative overflow-hidden rounded-lg p-6" style="background: linear-gradient(135deg, #0e1e3a 0%, #1a2f5a 100%);">
+          <div class="absolute inset-0 opacity-[0.05]" style="background-image: linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px); background-size: 30px 30px;"></div>
+          <div class="relative">
+            <span class="block text-[10px] font-bold uppercase tracking-[0.18em] text-[#ff8a4d] mb-2">
+              На&nbsp;рынке
+            </span>
+            <div class="flex items-baseline gap-2 mb-2">
+              <strong class="font-mono text-5xl font-bold text-white leading-none">16</strong>
+              <sup class="text-2xl text-[var(--accent)] font-bold">+</sup>
+              <span class="text-white/60 text-base">лет</span>
+            </div>
+            <p class="text-sm text-white/60">С&nbsp;2009&nbsp;года производим оборудование для&nbsp;маслозаводов</p>
+          </div>
+        </div>
+
+        <!-- Цифры в сетке 2x2 -->
+        <div class="grid grid-cols-2 gap-3">
+          <div class="bg-white border border-[#e4e7ec] rounded-lg p-4">
+            <strong class="block font-mono text-2xl font-bold text-[var(--navy)] leading-none mb-2">500<sup class="text-sm text-[var(--accent)]">+</sup></strong>
+            <span class="block text-[10px] font-bold uppercase tracking-wider text-[#5c6675] leading-tight">выполненных заказов</span>
+          </div>
+          <div class="bg-white border border-[#e4e7ec] rounded-lg p-4">
+            <strong class="block font-mono text-2xl font-bold text-[var(--navy)] leading-none mb-2">1000<sup class="text-sm text-[var(--accent)]">+</sup></strong>
+            <span class="block text-[10px] font-bold uppercase tracking-wider text-[#5c6675] leading-tight">наименований запчастей</span>
+          </div>
+          <div class="bg-white border border-[#e4e7ec] rounded-lg p-4 col-span-2">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 grid place-items-center rounded bg-[var(--accent)]/10 text-[var(--accent)] shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M21 12c0 5-9 9-9 9s-9-4-9-9V5l9-3 9 3v7z"/>
+                </svg>
+              </div>
+              <div>
+                <strong class="block text-sm font-bold text-[var(--navy)] mb-0.5">Паспорт ГОСТ</strong>
+                <span class="block text-[11px] text-[#5c6675]">На&nbsp;каждую партию</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA в сайдбаре -->
+        <a href="{% url 'contacts' %}" class="block bg-[var(--accent)] hover:bg-[var(--accent-hover)] rounded-lg p-5 text-white transition-colors group">
+          <div class="flex items-start justify-between gap-3">
+            <div>
+              <strong class="block text-base font-bold mb-1">Нужна консультация?</strong>
+              <span class="block text-sm text-white/80">Инженеры ответят на&nbsp;вопросы</span>
+            </div>
+            <svg class="w-5 h-5 shrink-0 mt-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </div>
+        </a>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}

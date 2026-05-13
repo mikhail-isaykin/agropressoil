@@ -1,0 +1,158 @@
+{% load static %}
+<!-- Заголовок секции — тёмный с сеткой и оранжевой полосой -->
+<section class="relative overflow-hidden" style="background: linear-gradient(115deg, #0e1e3a 0%, #1a2f5a 60%, #0e1e3a 100%);">
+  <!-- Декор: оранжевая полоска снизу -->
+  <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[var(--accent)] to-transparent"></div>
+  <!-- Декор-сетка -->
+  <div class="absolute inset-0 opacity-[0.05]" style="background-image: linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px); background-size: 40px 40px;"></div>
+
+  <div class="max-w-[1280px] mx-auto px-8 py-7 relative">
+    <div class="max-w-3xl">
+      <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-[#ff8a4d] mb-2">
+        <span class="w-7 h-0.5 bg-[var(--accent)]"></span>
+        Услуги ремонта
+      </span>
+      <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-white mb-1">
+        Возвращаем оборудование в&nbsp;работу
+      </h2>
+      <p class="text-base text-white/65 leading-relaxed">
+        Капитальный ремонт маслопрессов, восстановление вальцевых станков,
+        ремонт зеерных камер и&nbsp;чанов жаровень. Любой объём — от&nbsp;замены
+        отдельного узла до&nbsp;полного капремонта со&nbsp;сменой геометрии станины.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Сама карточка ремонта — оставляем как было -->
+<section class="bg-[#f5f6f8] py-10">
+  <div class="max-w-[1280px] mx-auto px-8">
+
+    <!-- Флагманская карточка капремонта -->
+    <div class="bg-white border border-[#e4e7ec] rounded-lg overflow-hidden grid grid-cols-1 lg:grid-cols-2">
+      <!-- Левая часть: фото до/после -->
+      <div class="relative p-4 bg-[#f5f6f8] rounded-lg">
+        <p class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.14em] text-[var(--accent)] mb-3 px-1">
+          <span class="w-7 h-0.5 bg-[var(--accent)]"></span>
+          Примеры работ
+        </p>
+
+        <div class="grid grid-cols-2 gap-3">
+          <!-- ДО 1 -->
+          <div class="group relative aspect-square bg-slate-200 rounded-lg overflow-hidden shadow-sm">
+            <img src="{% static 'images/repair/1.png' %}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            <div class="absolute inset-0 bg-black/20"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 bg-white/95 backdrop-blur-sm text-[var(--navy)] text-[10px] font-black uppercase tracking-widest rounded-full shadow-sm">
+              До
+            </span>
+          </div>
+
+          <!-- ПОСЛЕ 1 -->
+          <div class="group relative aspect-square bg-slate-200 rounded-lg overflow-hidden shadow-sm ring-2 ring-[var(--accent)]/40">
+            <img src="{% static 'images/repair/2.png' %}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            <div class="absolute inset-0 bg-black/10"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 bg-[var(--accent)] text-white text-[10px] font-black uppercase tracking-widest rounded-full shadow-sm">
+              После
+            </span>
+            <span class="absolute bottom-3 right-3 w-7 h-7 grid place-items-center rounded-full bg-[#1e7a4d] shadow">
+              <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </span>
+          </div>
+
+          <!-- ДО 2 -->
+          <div class="group relative aspect-square bg-slate-200 rounded-lg overflow-hidden shadow-sm">
+            <img src="{% static 'images/repair/3.png' %}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            <div class="absolute inset-0 bg-black/20"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 bg-white/95 backdrop-blur-sm text-[var(--navy)] text-[10px] font-black uppercase tracking-widest rounded-full shadow-sm">
+              До
+            </span>
+          </div>
+
+          <!-- ПОСЛЕ 2 -->
+          <div class="group relative aspect-square bg-slate-200 rounded-lg overflow-hidden shadow-sm ring-2 ring-[var(--accent)]/40">
+            <img src="{% static 'images/repair/4.png' %}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            <div class="absolute inset-0 bg-black/10"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 bg-[var(--accent)] text-white text-[10px] font-black uppercase tracking-widest rounded-full shadow-sm">
+              После
+            </span>
+            <span class="absolute bottom-3 right-3 w-7 h-7 grid place-items-center rounded-full bg-[#1e7a4d] shadow">
+              <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Правая часть: контент -->
+      <div class="p-8 lg:p-10 flex flex-col">
+        <h3 class="text-2xl font-extrabold text-[var(--navy)] mb-3">
+          Капитальный ремонт маслопрессов
+        </h3>
+        <p class="text-[15px] text-[#5c6675] leading-relaxed mb-6">
+          Полное восстановление маслопресса после длительной эксплуатации
+          или&nbsp;аварии. Возвращаем геометрию станины, меняем изношенные узлы,
+          проводим испытания под&nbsp;нагрузкой. На&nbsp;выходе&nbsp;—
+          фактически новое изделие с&nbsp;паспортом.
+        </p>
+
+        <div class="bg-[#f5f6f8] border-l-2 border-[var(--accent)] rounded p-5 mb-6">
+          <strong class="block text-xs font-bold uppercase tracking-wider text-[var(--navy)] mb-3">Что входит в&nbsp;капремонт:</strong>
+          <ul class="space-y-2.5 text-[15px] text-[#1a1f2b]">
+            <li class="flex gap-2.5">
+              <svg class="shrink-0 w-5 h-5 mt-0.5 text-[#1e7a4d]" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              Восстановление геометрии станины после деформации
+            </li>
+            <li class="flex gap-2.5">
+              <svg class="shrink-0 w-5 h-5 mt-0.5 text-[#1e7a4d]" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              Замена шнекового вала и&nbsp;ремонт зеерной камеры
+            </li>
+            <li class="flex gap-2.5">
+              <svg class="shrink-0 w-5 h-5 mt-0.5 text-[#1e7a4d]" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              Восстановление привода, питателя, редуктора
+            </li>
+            <li class="flex gap-2.5">
+              <svg class="shrink-0 w-5 h-5 mt-0.5 text-[#1e7a4d]" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              Испытания под&nbsp;нагрузкой, паспорт изделия, акт ОТК
+            </li>
+          </ul>
+        </div>
+
+        <div class="grid grid-cols-3 gap-4 pb-6 mb-6 border-b border-[#e4e7ec]">
+          <div>
+            <span class="block text-[11px] font-bold uppercase tracking-wider text-[#5c6675] mb-1">Срок</span>
+            <strong class="block text-base font-bold text-[var(--navy)]">от&nbsp;14 дней</strong>
+          </div>
+          <div>
+            <span class="block text-[11px] font-bold uppercase tracking-wider text-[#5c6675] mb-1">Гарантия</span>
+            <strong class="block text-base font-bold text-[var(--navy)]">12 месяцев</strong>
+          </div>
+          <div>
+            <span class="block text-[11px] font-bold uppercase tracking-wider text-[#5c6675] mb-1">Модели</span>
+            <strong class="block text-base font-bold text-[var(--navy)]">МП-68, А9-МПШ, М8-МШП и&nbsp;др.</strong>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-5 mt-auto">
+          <a href="#" class="inline-flex items-center gap-2 px-6 py-3.5 bg-[var(--accent)] hover:bg-[var(--accent-hover)] text-white text-[15px] font-bold rounded transition-colors">
+            Оставить заявку
+            <svg class="w-4 h-4"><use href="#icon-arrow" /></svg>
+          </a>
+          <a href="#" class="text-[15px] font-semibold text-[var(--accent)] border-b border-transparent hover:border-[var(--accent)] transition-colors">
+            Смотреть примеры работ →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
