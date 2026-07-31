@@ -1,0 +1,156 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+      <head>
+            <meta charset="utf-8">
+            <meta name="viewport"
+                  content="width=device-width, initial-scale=1, maximum-scale=1">
+            <meta name="theme-color" content="#62a329">
+            {# ---------- SEO: базовые мета (каждая страница переопределяет нужные блоки) ---------- #}
+            <title>{% block title %}Запчасти для маслопрессов ПМ, МП-68, М8-МПШ | press-oil.ru{% endblock title %}</title>
+            <meta name="description"
+                  content="{% block description %}Запчасти для маслопрессов ПМ, МП-68, Е8-МПШ, М8-МПШ, «Молдаван», «Ростовчанин». Ножи и ступицы жаровен Ж-68, Ж-48, запчасти зернодробилок и семенорушек. Доставка по России и СНГ.{% endblock description %}">
+            <meta name="robots"
+                  content="{% block robots %}index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1{% endblock robots %}">
+            {# гео-сигнал (основной регион задаётся в Яндекс.Вебмастере) #}
+            <meta name="geo.region" content="RU">
+            <meta name="geo.placename" content="Россия">
+            {# self-канонический URL: ЧИСТЫЙ адрес без query (?page/?category/utm не плодят дубли) #}
+            <link rel="canonical"
+                  href="{% block canonical %}{{ request.scheme }}://{{ request.get_host }}{{ request.path }}{% endblock canonical %}">
+            {# ---------- Фавиконки (положи файлы в static/img/) ---------- #}
+            <link rel="icon" href="{% static 'img/favicon.ico' %}" sizes="any">
+            <link rel="icon"
+                  type="image/png"
+                  sizes="32x32"
+                  href="{% static 'img/favicon-32x32.png' %}">
+            <link rel="icon"
+                  type="image/png"
+                  sizes="16x16"
+                  href="{% static 'img/favicon-16x16.png' %}">
+            <link rel="apple-touch-icon"
+                  sizes="180x180"
+                  href="{% static 'img/apple-touch-icon.png' %}">
+            {# ---------- Open Graph (соцсети, превью ссылок) ---------- #}
+            <meta property="og:locale" content="ru_RU">
+            <meta property="og:type"
+                  content="{% block og_type %}website{% endblock og_type %}">
+            <meta property="og:site_name"
+                  content="press-oil.ru — запчасти для маслопрессов">
+            <meta property="og:title"
+                  content="{% block og_title %}Запчасти для маслопрессов ПМ, МП-68, М8-МПШ | press-oil.ru{% endblock og_title %}">
+            <meta property="og:description"
+                  content="{% block og_description %}Запчасти для маслопрессов, ножи и ступицы жаровен Ж-68 и Ж-48, запчасти зернодробилок и семенорушек. Доставка по России и СНГ.{% endblock og_description %}">
+            <meta property="og:url"
+                  content="{% block og_url %}{{ request.scheme }}://{{ request.get_host }}{{ request.path }}{% endblock og_url %}">
+            {# для og:image лучше растровая картинка ~1200×630, не svg — положи в static/img/og-default.jpg #}
+            <meta property="og:image"
+                  content="{% block og_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'img/og-default.jpg' %}{% endblock og_image %}">
+            {# верификация вебмастеров — вставишь, когда подтвердишь сайт #}
+            {# <meta name="yandex-verification" content="..."> #}
+            {# <meta name="google-site-verification" content="..."> #}
+            {# ---------- Preconnect к CDN (ускоряет загрузку шрифтов и иконок) ---------- #}
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link rel="preconnect" href="https://use.fontawesome.com">
+            {# ---------- Шрифты (Google Fonts CDN) ---------- #}
+            <link rel="stylesheet"
+                  href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900,100italic,300italic,400italic,500italic,700italic,900italic%7COpen+Sans:300,400,500,600,700,800,300italic,400italic,500italic,600italic,700italic,800italic&subset=latin,cyrillic&display=swap">
+            <link rel="stylesheet"
+                  href="https://fonts.googleapis.com/css?family=Nunito:400,700&subset=latin,cyrillic&display=swap">
+            {# ---------- Font Awesome (CDN, иконки) ---------- #}
+            <link rel="stylesheet"
+                  href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
+            <link rel="stylesheet"
+                  href="https://use.fontawesome.com/releases/v5.14.0/css/v4-shims.css">
+            {# ---------- Тема ---------- #}
+            <link rel="stylesheet" href="{% static 'theme/style.css' %}">
+            <link rel="stylesheet" href="{% static 'theme/style-mobile.css' %}">
+            <link rel="stylesheet"
+                  href="{% static 'theme/styles/master-posts-custom.css' %}">
+            <link rel="stylesheet" href="{% static 'theme/styles/prettyPhoto.css' %}">
+            <link rel="stylesheet" href="{% static 'theme/styles/fontello.css' %}">
+            <link rel="stylesheet"
+                  href="{% static 'theme/styles/font-awesome.min.css' %}">
+            <link rel="stylesheet"
+                  href="{% static 'theme/functions/aqua/assets/css/aqpb-view.css' %}">
+            {# ---------- Плагины ---------- #}
+            <link rel="stylesheet"
+                  href="{% static 'plugins/shortcodes-ultimate/icons.css' %}">
+            <link rel="stylesheet"
+                  href="{% static 'plugins/shortcodes-ultimate/shortcodes.css' %}">
+            {# ---------- Скин темы (Redux dynamic из <head> оригинала) ---------- #}
+            <link rel="stylesheet" href="{% static 'theme/dynamic.css' %}">
+            {# ---------- Наши правки (последним, перебивает тему) ---------- #}
+            <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+            {% block extra_head %}
+            {% endblock extra_head %}
+            {# ---------- Structured data: организация (на весь сайт) ---------- #}
+            <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "МАСЛОПРЕССЗАВОД",
+        "url": "https://press-oil.ru/",
+        "logo": "https://press-oil.ru/static/img/Prodtechmash-logo-01-01.svg",
+        "description": "Продажа запчастей для маслопрессов (ПМ, МП-68, Е8-МПШ, М8-МПШ, «Молдаван», «Ростовчанин»), ножей и ступиц жаровен Ж-68 и Ж-48, запчастей для зернодробилок и семенорушек. Доставка по России и странам СНГ.",
+        "email": "info@press-oil.ru",
+        "telephone": "+79186373301",
+        "areaServed": [
+          { "@type": "Country", "name": "Россия" },
+          { "@type": "Country", "name": "Беларусь" },
+          { "@type": "Country", "name": "Казахстан" }
+        ],
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+79186373301",
+            "contactType": "sales",
+            "availableLanguage": ["ru"],
+            "areaServed": ["RU", "BY", "KZ"]
+          },
+          {
+            "@type": "ContactPoint",
+            "telephone": "+78612408083",
+            "contactType": "customer service",
+            "availableLanguage": ["ru"]
+          }
+        ],
+        "sameAs": [
+          "https://max.ru/u/f9LHodD0cOJiPaFHtQvtUvTy_o2ngpYYBZIvF_fKdxmh42fXhAxl4ZEY-h0"
+        ]
+      }
+            </script>
+            {% block jsonld %}
+            {% endblock jsonld %}
+      </head>
+      {# класс body у каждой страницы свой (на главной был 'home ... page-id-596 upper') #}
+      <body class="{% block body_class %}{% endblock body_class %}">
+            {% include 'includes/header.html' %}
+            <div class="wrapper">
+                  {# каждая страница кладёт сюда свой <div class="container ..."> с контентом #}
+                  {% block content %}
+                  {% endblock content %}
+                  {% include 'includes/footer.html' %}
+            </div>
+            {# кнопка «наверх» #}
+            <div class="scrollTo_top ribbon" style="display: block">
+                  <a title="Наверх" class="rad" href="#"><i class="fas fa-chevron-up"></i></a>
+            </div>
+            {# ---------- JS: jQuery + тема (порядок как в оригинале) ---------- #}
+            <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+            <script src="{% static 'vendor/jquery/jquery-migrate.min.js' %}"></script>
+            {# виджеты темы, меню, лайтбокс, липкая шапка #}
+            <script src="{% static 'plugins/masterposts/jquery-master-posts.js' %}"></script>
+            <script src="{% static 'theme/js/jquery.hoverIntent.minified.js' %}"></script>
+            <script src="{% static 'theme/js/jquery.prettyPhoto.js' %}"></script>
+            <script src="{% static 'theme/js/superfish.js' %}"></script>
+            <script src="{% static 'theme/js/jquery-scrolltofixed-min.js' %}"></script>
+            <script src="{% static 'theme/js/ownScript.js' %}"></script>
+            {# слайдер #}
+            <script src="{% static 'theme/js/jquery.flexslider-min.js' %}"></script>
+            <script src="{% static 'theme/js/jquery.flexslider.start.main.js' %}"></script>
+            {% block extra_js %}
+            {% endblock extra_js %}
+      </body>
+</html>
