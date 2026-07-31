@@ -1,0 +1,26 @@
+{% comment %}
+  Общая пагинация (новости + каталог). Рассчитана на пагинацию ListView:
+  Django сам кладёт в контекст page_obj / paginator / is_paginated при paginate_by.
+  Классы .page-numbers / .page-numbers.current — из темы.
+  Сохраняет текущие GET-параметры (например ?category=...), меняя только page.
+{% endcomment %}
+{% if is_paginated %}
+  <div class="pagination" style="text-align:center;margin:30px 0">
+    {% if page_obj.has_previous %}
+      <a class="prev page-numbers"
+         href="?page={{ page_obj.previous_page_number }}{% for k, v in request.GET.items %}{% if k != 'page' %}&{{ k }}={{ v }}{% endif %}{% endfor %}">← Назад</a>
+    {% endif %}
+    {% for num in paginator.page_range %}
+      {% if num == page_obj.number %}
+        <span class="page-numbers current">{{ num }}</span>
+      {% else %}
+        <a class="page-numbers"
+           href="?page={{ num }}{% for k, v in request.GET.items %}{% if k != 'page' %}&{{ k }}={{ v }}{% endif %}{% endfor %}">{{ num }}</a>
+      {% endif %}
+    {% endfor %}
+    {% if page_obj.has_next %}
+      <a class="next page-numbers"
+         href="?page={{ page_obj.next_page_number }}{% for k, v in request.GET.items %}{% if k != 'page' %}&{{ k }}={{ v }}{% endif %}{% endfor %}">Далее →</a>
+    {% endif %}
+  </div>
+{% endif %}
