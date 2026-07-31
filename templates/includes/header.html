@@ -1,0 +1,103 @@
+{% load static %}
+{# ============ ВЕРХНЯЯ ПЛАШКА (контакты, поиск, соцсети) ============ #}
+<div id="topnav" class="head-ghost">
+  <div class="container_alt container_pad">
+    <p><i class="fas fa-envelope fa-lg"></i><a title="Написать" href="mailto:info@press-oil.ru">info@press-oil.ru</a></p>
+    <p><i class="fas fa-mobile-alt fa-lg"></i><a title="Позвонить" href="tel:+79186373301">+7 918 637 33 01</a> <a title="Написать в MAX"
+    href="https://max.ru/u/f9LHodD0cOJiPaFHtQvtUvTy_o2ngpYYBZIvF_fKdxmh42fXhAxl4ZEY-h0"
+    target="_blank"
+    rel="noopener"><i class="fas fa-comment-dots fa-lg"></i></a></p>
+    <p><i class="fas fa-phone-alt fa-lg"></i><a title="Доп. телефон" href="tel:+78612408083">+7 861 240 80 83</a></p>
+    {# TODO: action → {% url 'search' %} когда заведёшь поиск #}
+    <form class="searchform tranz" method="get" action="#">
+      <input type="text"
+             name="s"
+             class="s tranz"
+             size="30"
+             value="Поиск..."
+             onfocus="if (this.value = '') {this.value = '';}"
+             onblur="if (this.value == '') {this.value = 'Поиск...';}">
+      <button class="searchSubmit">
+        <i class="fas fa-search"></i>
+      </button>
+    </form>
+    <ul class="social-menu">
+      <li class="sprite-whatsapp">
+        <a title="WhatsApp"
+           href="https://api.whatsapp.com/send?phone=37378880048"><i class="fab fa-whatsapp"></i></a>
+      </li>
+      <li class="sprite-vk">
+        <a title="VK" href="https://vk.com/maslopresszavodrf"><i class="fab fa-vk"></i></a>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="clearfix"></div>
+{# ============ ШАПКА (логотип + меню) ============ #}
+<div id="header"
+     class="boxshadow"
+     itemscope
+     itemtype="http://schema.org/WPHeader">
+  <div class="container_alt container_pad">
+    <div id="mainhead">
+      <div id="titles" class="tranz">
+        {# логотип — НЕ заголовок: убрали <h1>, чтобы единственный h1 страницы описывал её тему #}
+        <a class="logo" href="{% url 'pages:home' %}">
+          <img class="tranz"
+               src="{% static 'img/Prodtechmash-logo-01-01.svg' %}"
+               alt="МАСЛОПРЕССЗАВОД — Prodtehmas SRL">
+        </a>
+        <div class="clearfix"></div>
+      </div>
+      {# доп. меню справа сверху #}
+      <div class="additional-menu-wrap">
+        <ul id="menu-special-menu" class="nav additional-menu">
+          <li class="menu-item"><a href="{% url 'catalog:product_detail' slug='tekhnologiia-proizvodstva-rastitelnykh-masel-metodom-spirtovoi-ekstraktsii' %}"><i class="fas fa-oil-can"></i>Экстракция</a></li>
+          <li class="menu-item"><a href="{% url 'catalog:product_detail' slug='tekhnologiia-proizvodstva-rapsovogo-masla' %}"><i class="fas fa-seedling"></i>Рапс</a></li>
+          <li class="menu-item"><a href="{% url 'catalog:product_detail' slug='tekhnologiia-proizvodstva-podsolnechnogo-masla' %}"><i class="fas fa-sun"></i> Подсолнечник</a></li>
+          <li class="menu-item"><a href="{% url 'catalog:product_detail' slug='tekhnologiia-i-produkty-pererabotki-soi' %}"><i class="fas fa-leaf"></i>Соя</a></li>
+          <li class="menu-item"><a href="{% url 'pages:contacts' %}"><i class="fas fa-bullhorn"></i><b>Сделать заявку</b></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="navhead">
+      <a id="navtrigger" class="rad ribbon" href="#">MENU</a>
+      <nav id="navigation"
+           itemscope
+           itemtype="http://schema.org/SiteNavigationElement">
+        {% comment %}
+          cur = имя текущего URL (request.resolver_match.url_name). Активному пункту
+          добавляем класс current-menu-item — тема рисует ему бирюзовую линию.
+        {% endcomment %}
+        {% with cur=request.resolver_match.url_name %}
+          <ul id="main-nav" class="nav">
+            <li class="menu-item {% if cur == 'product_list' %}current-menu-item{% endif %}"><a href="{% url 'catalog:product_list' %}">Каталог</a></li>
+            <li class="menu-item {% if cur == 'services' %}current-menu-item{% endif %}"><a href="{% url 'pages:services' %}">УСЛУГИ</a></li>
+            <li class="menu-item menu-item-has-children {% if cur == 'innovations' %}current-menu-item{% endif %}">
+              <a href="{% url 'pages:innovations' %}">Инновации</a>
+              <ul class="sub-menu">
+                <li class="menu-item"><a href="{% url 'pages:uchastok_ochistki_i_sushki_semyan' %}">Участок очистки и сушки семян</a></li>
+                <li class="menu-item"><a href="{% url 'pages:uchastok_podgotovki_semyan' %}">Участок подготовки семян</a></li>
+                <li class="menu-item"><a href="{% url 'pages:uchastok_pressovaniya' %}">Участок прессования (отжима растительного масла)</a></li>
+                <li class="menu-item"><a href="{% url 'pages:uchastok_filtratsii' %}">Участок фильтрации</a></li>
+                <li class="menu-item"><a href="{% url 'pages:uchastok_rafinatsii' %}">Участок рафинации</a></li>
+                <li class="menu-item"><a href="{% url 'pages:uchastok_dezodoratsii' %}">Участок дезодорации растительных масел</a></li>
+              </ul>
+            </li>
+            <li class="menu-item {% if cur == 'about' %}current-menu-item{% endif %}"><a href="{% url 'pages:about' %}">О компании</a></li>
+            <li class="menu-item menu-item-has-children {% if cur == 'projects_photo' or cur == 'projects_video' %}current-menu-item{% endif %}">
+              <a href="{% url 'pages:projects_photo' %}">Проекты</a>
+              <ul class="sub-menu">
+                <li class="menu-item"><a href="{% url 'pages:projects_photo' %}">Фото</a></li>
+                <li class="menu-item"><a href="{% url 'pages:projects_video' %}">Видео о проектах Prodtehmas SRL</a></li>
+              </ul>
+            </li>
+            <li class="menu-item {% if cur == 'news_list' %}current-menu-item{% endif %}"><a href="{% url 'news:news_list' %}">НОВОСТИ</a></li>
+            <li class="menu-item {% if cur == 'contacts' %}current-menu-item{% endif %}"><a href="{% url 'pages:contacts' %}"><i class="far fa-handshake"></i>Контакты</a></li>
+          </ul>
+        {% endwith %}
+      </nav>
+    </div>
+  </div>
+</div>
+<div class="clearfix"></div>
