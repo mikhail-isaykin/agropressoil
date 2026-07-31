@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ product.title }} — Prodtehmas SRL{% endblock title %}
+{% block description %}{{ product.sidebar_text|default:product.title }}{% endblock description %}
+{% block og_title %}{{ product.title }}{% endblock og_title %}
+{% block og_description %}{{ product.sidebar_text|default:product.title }}{% endblock og_description %}
+{% block og_image %}
+  {% if product.featured_image %}
+    {{ request.scheme }}://{{ request.get_host }}{{ product.featured_image.url }}
+  {% else %}
+    {{ block.super }}
+  {% endif %}
+{% endblock og_image %}
+{% block body_class %}work-template-default single single-work upper{% endblock body_class %}
+{% block content %}
+  <div class="page-header p-border">
+    <div class="container">
+      <h1>{{ product.title }}</h1>
+    </div>
+  </div>
+  <div class="container container_alt">
+    <div class="foliobarRight">
+      <div id="foliosidebar" class="foliohead stickme">
+        <div class="widgetable">
+          <div class="sidewrap">
+            {% if product.sidebar_text %}
+              <p class="ghost description main">{{ product.sidebar_text }}</p>
+            {% endif %}
+            <p class="ghost description foliocat">
+              <i class="fas fa-file-alt"></i>
+              <a href="{% url 'catalog:product_list' %}?category={{ product.category }}"
+                 rel="tag">{{ product.get_category_display }}</a>
+            </p>
+            <div class="nav_item">
+              {% if prev %}
+                <a href="{{ prev.get_absolute_url }}" rel="prev"><i title="Предыдущая" class="fas fa-chevron-left"></i></a>
+              {% endif %}
+              <a href="{% url 'catalog:product_list' %}"><i title="Весь каталог" class="fas fa-th"></i></a>
+              {% if next %}
+                <a href="{{ next.get_absolute_url }}" rel="next"><i title="Следующая" class="fas fa-chevron-right"></i></a>
+              {% endif %}
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+      <div id="foliocontent">
+        <div class="entry entry_item">
+          {% if product.featured_image %}
+            <img width="880"
+                 height="570"
+                 src="{{ product.featured_image.url }}"
+                 class="attachment-work size-work wp-post-image"
+                 alt="{{ product.title }}">
+          {% endif %}
+          {{ product.body|safe }}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}
