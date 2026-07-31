@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Новости — Prodtehmas SRL{% endblock title %}
+{% block description %}Новости компании Prodtehmas SRL: производство оборудования для переработки масличных культур, технологии отжима и рафинации масла.{% endblock description %}
+{% block og_title %}Новости — Prodtehmas SRL{% endblock og_title %}
+{% block og_description %}Новости и статьи Prodtehmas SRL.{% endblock og_description %}
+{% block body_class %}page-template-homepage page upper{% endblock body_class %}
+{% block content %}
+  <div class="widgetwrap widgetwrap-alt">
+    <div class="block_bg" style="background-color:#fff"></div>
+    <div class="container builder woocommerce" style="padding:0">
+      <h2 class="block" style="color:#000">
+        <span class="maintitle">Все новости</span>
+      </h2>
+      <div class="mp-wrap">
+        <ul class="homeblog mpbox col4">
+          {% for item in news %}
+            <li>
+              <div class="item normal tranz boxshadow post type-post has-post-thumbnail hentry category-news">
+                {% if item.image %}
+                  <div class="entryhead">
+                    <div class="imgwrap">
+                      <a class="imglink" href="{{ item.get_absolute_url }}">
+                        <img width="275"
+                             height="175"
+                             src="{{ item.image.url }}"
+                             class="tranz grayscale grayscale-fade wp-post-image"
+                             alt="{{ item.title }}">
+                      </a>
+                    </div>
+                  </div>
+                {% endif %}
+                <div class="item_inn tranz">
+                  <h2><a href="{{ item.get_absolute_url }}">{{ item.title }}</a></h2>
+                  <p class="teaser tranz">{{ item.teaser }}</p>
+                  <p class="meta date tranz">{{ item.published|date:"d.m.Y" }}</p>
+                  <p class="meta_more"><a href="{{ item.get_absolute_url }}">Далее</a></p>
+                </div>
+              </div>
+            </li>
+          {% empty %}
+            <li>
+              <p>Пока новостей нет.</p>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% include 'includes/_pagination.html' %}
+    </div>
+  </div>
+{% endblock content %}
