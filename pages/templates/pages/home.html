@@ -1,0 +1,236 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Оборудование для переработки семян масличных культур — Prodtehmas SRL{% endblock title %}
+{% block body_class %}home page-template-homepage upper{% endblock body_class %}
+{% block content %}
+  {# единственный h1 страницы — визуально скрыт, нужен .visually-hidden в custom.css #}
+  <h1 class="visually-hidden">Оборудование для переработки семян масличных культур — Prodtehmas SRL</h1>
+  {# 1. СЛАЙДЕР (flexslider). 6 слайдов. #}
+  <div class="mainflex flexslider loading no_margin">
+    <div class="loading-inn">
+      <i class="fas fa-cog fa-spin"></i>
+    </div>
+    <ul class="slides">
+      <li>
+        <a href="#" title="Маслопрессы шнековые для отжима масла">
+          <img class="tranz wp-post-image"
+               src="{% static 'pages/img/slider/slide-1.jpg' %}"
+               width="1600"
+               height="570"
+               alt="Маслопресс шнековый для отжима масла">
+        </a>
+        <div class="flexinside tranz" style="color:#fff;">
+          <h2><a style="color:#fff"
+   href="#"
+   title="Маслопрессы шнековые для отжима масла">Маслопрессы шнековые для отжима масла</a></h2>
+          <div class="flexinside-inn">
+            <p>Маслопрессзавод «<a style="color:#fff;" href="#">Prodtehmas SRL</a>» предлагает шнековые маслопрессы для производства растительного масла по технологии холодного и горячего отжима.</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <a href="#" title="Инновации">
+          <img class="tranz wp-post-image"
+               src="{% static 'pages/img/slider/slide-2.jpg' %}"
+               width="1600"
+               height="570"
+               alt="Инновации">
+        </a>
+        <div class="flexinside tranz" style="color:#fff;">
+          <h2><a style="color:#fff;" href="#" title="Инновации">Инновации</a></h2>
+          <div class="flexinside-inn">
+            <p>Комплекс по переработке семян масличных культур на масло и жмых.</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <a href="#" title="Участок дезодорации">
+          <img class="tranz wp-post-image"
+               src="{% static 'pages/img/slider/slide-3.jpg' %}"
+               width="1600"
+               height="570"
+               alt="Участок дезодорации">
+        </a>
+        <div class="flexinside tranz" style="color:#fff;">
+          <h2><a style="color:#fff;" href="#" title="Участок дезодорации">Участок дезодорации</a></h2>
+          <div class="flexinside-inn">
+            <p class="western" align="justify">Комплекс предназначен для удаления из растительных масел ароматических и дезодорирующих веществ, остаточных свободных жирных кислот, альдегидов и кетонов, нежелательных чужеродных соединений.</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <a href="#" title="Участок рафинации">
+          <img class="tranz wp-post-image"
+               src="{% static 'pages/img/slider/slide-4.jpg' %}"
+               width="886"
+               height="427"
+               alt="Оборудование для рафинации растительных масел">
+        </a>
+        <div class="flexinside tranz" style="color:#fff;">
+          <h2><a style="color:#fff;" href="#" title="Участок рафинации">Участок рафинации</a></h2>
+          <div class="flexinside-inn">
+            <p>Рафинация растительных масел предназначена для специальной обработки масла (гидратация, нейтрализация, промывка, вакуум-сушка). Оборудование от Prodtehmas SRL позволит получить масло с сохранением пищевой ценности.</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <a href="#" title="Участок фильтрации">
+          <img class="tranz wp-post-image"
+               src="{% static 'pages/img/slider/slide-5.jpg' %}"
+               width="1600"
+               height="570"
+               alt="Участок фильтрации">
+        </a>
+        <div class="flexinside tranz" style="color:#fff;">
+          <h2><a style="color:#fff;" href="#" title="Участок фильтрации">Участок фильтрации</a></h2>
+          <div class="flexinside-inn">
+            <p class="western" align="justify">Фильтрация растительных масел. Комплект оборудования предназначен для очистки масла от нежировых примесей, взвешенных частиц, фузов, слизи и механических включений.</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <a href="#" title="Участок очистки и сушки семян">
+          <img class="tranz wp-post-image"
+               src="{% static 'pages/img/slider/slide-6.jpg' %}"
+               width="1600"
+               height="570"
+               alt="Участок очистки и сушки семян">
+        </a>
+        <div class="flexinside tranz" style="color:#fff;">
+          <h2><a style="color:#fff;" href="#" title="Участок очистки и сушки семян">Участок очистки и сушки семян</a></h2>
+          <div class="flexinside-inn">
+            <p class="western" align="justify">Предназначен для предварительной очистки и сушки семян масличных культур.</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="clearfix"></div>
+  {# 2. ПРЕИМУЩЕСТВА #}
+  <div class="widgetwrap widgetwrap-alt">
+    <div class="block_bg" style="background-color:#5e5e5e;"></div>
+    <div class="container builder woocommerce" style="padding:0px 0;">
+      <h2 class="block" style="color:#ffffff;">
+        <span class="maintitle">Преимущества компании Prodtehmas SRL</span>
+        <span class="subtitle" style="color:#ffffff;">При организации технологического процесса по переработке масличных культур сотрудники нашей компании окажут вам максимальное внимание, предложат квалифицированную консультацию. Предлагаем услуги по диагностике, модернизации, ремонту существующих производств и проводим технико-технологический аудит.</span>
+      </h2>
+      <div class="mp-wrap">
+        <ul class="mpbox col1 modern boxed">
+        </ul>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  {# 3. ПРОДУКЦИЯ — цикл по каталогу #}
+  <div class="widgetwrap widgetwrap-alt">
+    <div class="block_bg" style="background-color:#f2f2f2;"></div>
+    <div class="container builder woocommerce" style="padding:0px 0;">
+      <h2 class="block" style="color:#000;">
+        <span class="maintitle">Продукция компании Prodtehmas SRL</span>
+        <span class="subtitle" style="color:#000;">Готовые решения</span>
+      </h2>
+      <div class="mp-wrap">
+        <div id="portfolio-filter" class="clearfix tmnf_hide">
+          <ul>
+            <li><a class="active rad" href="{% url 'catalog:product_list' %}">Все</a></li>
+            <li class="cat-item"><a href="{% url 'catalog:product_list' %}?category=zapchasti-i-emkosti">Запчасти и емкости</a></li>
+            <li class="cat-item"><a href="{% url 'catalog:product_list' %}?category=kompleksnye-resheniya">Комплексные решения</a></li>
+            <li class="cat-item"><a href="{% url 'catalog:product_list' %}?category=ochistka-masla">Очистка масла</a></li>
+            <li class="cat-item"><a href="{% url 'catalog:product_list' %}?category=podgotovka-syrya">Подготовка сырья</a></li>
+            <li class="cat-item"><a href="{% url 'catalog:product_list' %}?category=pressovanie">Прессование</a></li>
+            <li class="cat-item"><a href="{% url 'catalog:product_list' %}?category=utilizatsiya-othodov">Утилизация отходов, лузги и получение тепловой энергии</a></li>
+          </ul>
+        </div>
+        <ul class="folio mpbox col4">
+          {% for product in products %}
+            <li>
+              <div class="item post tranz boxshadow classic4">
+                <div class="imgwrap">
+                  {% if product.featured_image %}
+                    <a href="{{ product.get_absolute_url }}" title="{{ product.title }}">
+                      <img class="tranz grayscale grayscale-fade wp-post-image"
+                           src="{{ product.featured_image.url }}"
+                           width="275"
+                           height="220"
+                           alt="{{ product.title }}">
+                    </a>
+                    <a class="hoverstuff hoverstuff-zoom"
+                       data-gal="prettyPhoto[gallery]"
+                       href="{{ product.featured_image.url }}"><i class="fas fa-arrows-alt"></i></a>
+                    <a class="hoverstuff hoverstuff-link"
+                       href="{{ product.get_absolute_url }}"><i class="fas fa-sign-out-alt"></i></a>
+                  {% endif %}
+                </div>
+                <div class="item_inn tranz">
+                  <p class="meta tranz">{{ product.get_category_display }}</p>
+                  <h2><a href="{{ product.get_absolute_url }}" title="{{ product.title }}">{{ product.title }}</a></h2>
+                  {% if product.sidebar_text %}
+                    <p class="teaser tranz">{{ product.sidebar_text|truncatewords:12 }}</p>
+                  {% endif %}
+                </div>
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+  {# 4. ТЕКСТОВЫЙ БЛОК #}
+  <div class="widgetwrap widgetwrap-alt text-full"
+       style="padding:70px 0;
+              color:#fff;
+              background-color:#404347;
+              background-image:url('{% static 'pages/img/bg-text-block.png' %}')">
+    <h2 class="block" style="color:#ffffff;">
+      <span class="maintitle">Prodtehmas SRL</span>
+      <span class="subtitle" style="color:#ffffff;">Опыт, качество, надёжность</span>
+    </h2>
+    <p>Наша компания занимается разработкой, изготовлением и продажей технологических линий по производству растительного масла, маслопрессов шнековых для отжима масла, оборудования для фильтрации и рафинации растительных масел.</p>
+    <p>Наши специалисты совершенствуют технологию производства растительных масел более 10-ти лет.</p>
+    <p>Наша компания разрабатывает рабочие схемы расстановки оборудования, планирует производство, выполняет шефмонтаж и пусконаладочные работы линий по переработке семян масличных культур.</p>
+    <p>Специалисты имеют большой опыт в данной сфере. Наши линии по переработке семян масличных культур (подсолнечник, соя, рапс, лён, сафлор, горчица и др.) смонтированы и успешно работают во многих странах.</p>
+    <p>Компания Prodtehmas SRL оказывает консультационные услуги, диагностику, предложения по модернизации и ремонту существующих производств, а также технико-технологический аудит.</p>
+    <p>При соблюдении предлагаемой технологии наше оборудование позволяет добиться минимально возможной остаточной масличности в жмыхе.</p>
+  </div>
+  {# 5. НОВОСТИ — цикл по последним новостям #}
+  <div class="widgetwrap widgetwrap-alt">
+    <div class="block_bg" style="background-color:#f9f9f9;"></div>
+    <div class="container builder woocommerce" style="padding:0px 0;">
+      <h2 class="block" style="color:#000;">
+        <span class="maintitle">Новости</span>
+        <span class="subtitle" style="color:#000;">Обо всём узнаём вместе</span>
+      </h2>
+      <div class="mp-wrap">
+        <ul class="homeblog mpbox col4">
+          {% for item in news %}
+            <li>
+              <div class="item normal tranz boxshadow">
+                {% if item.image %}
+                  <div class="entryhead">
+                    <div class="imgwrap">
+                      <a class="imglink" href="{{ item.get_absolute_url }}">
+                        <img class="tranz grayscale grayscale-fade wp-post-image"
+                             src="{{ item.image.url }}"
+                             width="275"
+                             height="175"
+                             alt="{{ item.title }}">
+                      </a>
+                    </div>
+                  </div>
+                {% endif %}
+                <div class="item_inn tranz">
+                  <h2><a href="{{ item.get_absolute_url }}">{{ item.title }}</a></h2>
+                  {% if item.teaser %}
+                    <p class="teaser tranz">{{ item.teaser }}</p>
+                  {% endif %}
+                  <p class="meta date tranz">{{ item.published|date:"d.m.Y" }}</p>
+                  <p class="meta_more"><a href="{{ item.get_absolute_url }}">Далее</a></p>
+                </div>
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+{% endblock content %}
