@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% comment %}
+  Рамка-каркас для страниц «участков» раздела Инновации.
+  Конкретные участки наследуют его ({% extends 'pages/innovations/_base.html' %})
+  и заполняют только два блока:
+    {% block stage_title %} — заголовок (в плашке и, отдельно, в <title>);
+    {% block stage_body %}  — контент участка (картинка, текст, списки).
+  Вся обвязка (плашка, две колонки, сайдбар) живёт здесь, в одном месте.
+{% endcomment %}
+{% block body_class %}page page-template-default page-child upper{% endblock body_class %}
+{% block content %}
+  <div class="page-header p-border">
+    <div class="container">
+      <h1>
+        {% block stage_title %}
+        {% endblock stage_title %}
+      </h1>
+    </div>
+  </div>
+  <div class="container container_alt">
+    <div id="core">
+      <div class="postbarLeft">
+        <div id="content" class="eightcol first">
+          <div class="post page">
+            <div class="entry">
+              {% block stage_body %}
+              {% endblock stage_body %}
+            </div>
+          </div>
+        </div>
+        {% include 'pages/innovations/_sidebar.html' %}
+      </div>
+    </div>
+  </div>
+{% endblock content %}
