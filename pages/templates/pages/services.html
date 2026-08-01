@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Услуги — МАСЛОПРЕССЗАВОД - Prodtehmas SRL{% endblock title %}
+{% block description %}Услуги Prodtehmas SRL: консультации, подбор, производство и монтаж оборудования для переработки масличных культур, пусконаладка, обучение персонала, гарантийное обслуживание и запчасти.{% endblock description %}
+{% block og_title %}Услуги — Prodtehmas SRL{% endblock og_title %}
+{% block og_description %}Полный спектр работ: от консультаций и подбора оборудования до монтажа, пусконаладки и сервиса.{% endblock og_description %}
+{% block body_class %}page page-template-template-fullwidth upper{% endblock body_class %}
+{% block content %}
+  {% comment %}
+    Плашка-заголовок: баннер + h1. ВНИМАНИЕ: services.jpg — временная заглушка (878×400),
+    настоящий баннер 2016/04/производство-подсолнечного-масла.jpg в архив не попал —
+    забери его с живого сайта и замени static/img/headers/services.jpg
+  {% endcomment %}
+  <div class="page-header p-border">
+    <img src="{% static 'pages/img/headers/services.jpg' %}"
+         width="878"
+         height="400"
+         class="page-header-img grayscale grayscale-fade wp-post-image"
+         alt="Услуги Prodtehmas SRL">
+    <div class="container">
+      <h1>Услуги</h1>
+    </div>
+  </div>
+  <div class="container container_alt">
+    <div id="core">
+      <div class="entry entryfull">
+        <h2><strong>Наше предприятие выполняет следующие виды работ:</strong></h2>
+        <ul>
+          <li>квалифицированные консультации по организации технологического процесса по переработке масличных культур (подсолнечник, соя, рапс, лен, сафлор, горчица и др.)</li>
+          <li>подбор, производство и монтаж оборудования по производству растительного масла</li>
+          <li>разработка схемы расположения оборудования (как на существующих площадях, так и на вновь строящихся)</li>
+          <li>пуско-наладочные работы</li>
+          <li>обучение персонала эксплуатировать поставляемое оборудование</li>
+          <li>гарантийное и пост гарантийное обслуживание поставляемого оборудования</li>
+          <li>диагностика, предложение по модернизации существующего производства</li>
+          <li>технико-технологический аудит.</li>
+          <li>изготовление и поставка оригинальных запасных частей к оборудованию, изготовленному на <strong>Prodtehmas SRL</strong>.</li>
+        </ul>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+{% endblock content %}
