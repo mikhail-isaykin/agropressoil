@@ -1,0 +1,25 @@
+{% comment %}
+  Сайдбар раздела «Технологии / Инновации»: меню 6 участков.
+  Общий для обзорной страницы и всех под-страниц участков.
+  Активному участку вешаем current-menu-item — тема красит его бирюзовым
+  (CSS .sidewrap ul.menu>li.current-menu-item>a уже в теме).
+  cur = имя текущего URL (без namespace); ссылки — через namespace pages:.
+{% endcomment %}
+{% with cur=request.resolver_match.url_name %}
+  <div id="sidebar" class="pagesidebar fourcol woocommerce stickme">
+    <div class="widgetable">
+      <div class="sidewrap">
+        <div class="menu-services-menu-container">
+          <ul id="menu-services-menu" class="menu">
+            <li class="menu-item {% if cur == 'uchastok_dezodoratsii' %}current-menu-item{% endif %}"><a href="{% url 'pages:uchastok_dezodoratsii' %}">Участок дезодорации растительных масел</a></li>
+            <li class="menu-item {% if cur == 'uchastok_rafinatsii' %}current-menu-item{% endif %}"><a href="{% url 'pages:uchastok_rafinatsii' %}">Участок рафинации</a></li>
+            <li class="menu-item {% if cur == 'uchastok_filtratsii' %}current-menu-item{% endif %}"><a href="{% url 'pages:uchastok_filtratsii' %}">Участок фильтрации</a></li>
+            <li class="menu-item {% if cur == 'uchastok_pressovaniya' %}current-menu-item{% endif %}"><a href="{% url 'pages:uchastok_pressovaniya' %}">Участок прессования (отжима растительного масла)</a></li>
+            <li class="menu-item {% if cur == 'uchastok_podgotovki_semyan' %}current-menu-item{% endif %}"><a href="{% url 'pages:uchastok_podgotovki_semyan' %}">Участок подготовки семян</a></li>
+            <li class="menu-item {% if cur == 'uchastok_ochistki_i_sushki_semyan' %}current-menu-item{% endif %}"><a href="{% url 'pages:uchastok_ochistki_i_sushki_semyan' %}">Участок очистки и сушки семян</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endwith %}
