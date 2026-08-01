@@ -1,0 +1,199 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Запчасти для маслопрессов — звенья, втулки, ножи, планки{% endblock title %}
+{% block description %}Запасные части и быстроизнашиваемые детали для шнековых маслопрессов: звенья, втулки, планки, ножи, кольца, конусы, валы. Поставка по России и СНГ, техподдержка.{% endblock description %}
+{% block og_title %}Запасные части для маслопрессов{% endblock og_title %}
+{% block og_description %}Запчасти и расходные материалы для шнековых маслопрессов. Доставка по России и СНГ.{% endblock og_description %}
+{% block body_class %}page-template page-template-template-fullwidth page upper{% endblock body_class %}
+{% block jsonld %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "{{ request.scheme }}://{{ request.get_host }}/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Запасные части для маслопрессов",
+          "item": "{{ request.scheme }}://{{ request.get_host }}{{ request.path }}"
+        }
+      ]
+    }
+  </script>
+{% endblock jsonld %}
+{% block content %}
+  <div class="page-header p-border">
+    <div class="container">
+      <h1>Запасные части для маслопрессов</h1>
+    </div>
+  </div>
+  <div class="container container_alt">
+    <div class="entry">
+      <p>
+        <img src="{% static 'pages/img/zapchasti/zapchast-1.jpg' %}"
+             alt="Запчасти для маслопрессов МП-68, М8-МПШ, ПМ, Е8-МПШ"
+             style="max-width:100%;
+                    height:auto">
+      </p>
+      <h2>Запчасти и расходные материалы для шнековых маслопрессов</h2>
+      <p>Запасные части и детали для маслопрессов — одно из главных направлений нашей работы. Мы поставляем комплектующие для шнековых прессов и пищевого оборудования и помогаем владельцам как можно быстрее вернуть технику в строй, без долгих простоев.</p>
+      <p>В наличии — широкий ассортимент запчастей и расходных материалов, мы обеспечиваем их бесперебойную поставку по России и странам СНГ. Наши специалисты готовы оказать техническую поддержку при обслуживании и ремонте оборудования.</p>
+      <h2>Из чего состоит шнековый маслопресс</h2>
+      <p>Шнековый пресс для отжима подсолнечного и других растительных масел собран из основных узлов: станина, мотор-редуктор на 11 кВт, шнековый питатель, зеерная камера и шнек для отжима масла. Именно эти узлы и определяют, какие детали изнашиваются и подлежат замене в первую очередь.</p>
+      <p>
+        <img src="{% static 'pages/img/zapchasti/zapchast-2.jpg' %}"
+             alt="Маслопресс М8-МПШ"
+             loading="lazy"
+             style="max-width:100%;
+                    height:auto">
+      </p>
+      <h2>Быстроизнашиваемые детали зеерной камеры</h2>
+      <p>По мере выработки пресса часть деталей зеерной камеры требует периодической замены. Особое внимание стоит уделить запчастям и быстроизнашиваемым деталям шнековых маслопрессов — мы поставляем полный их перечень:</p>
+      <div class="zip-top">
+        <div class="zip-top__img">
+          <img src="{% static 'pages/img/zapchasti/zapchast-3.jpg' %}"
+               alt="Зеерная камера маслопресса">
+        </div>
+        <div class="zip-top__list">
+          <div class="su-list" style="margin-left:0">
+            <ul>
+              <li><i class="sui sui-check" style="color:#999"></i> планки</li>
+              <li><i class="sui sui-check" style="color:#999"></i> планки упорные</li>
+              <li><i class="sui sui-check" style="color:#999"></i> планки соединительные</li>
+              <li><i class="sui sui-check" style="color:#999"></i> планка рабочая (1–2 камера)</li>
+              <li><i class="sui sui-check" style="color:#999"></i> планка рабочая (3–4 камера)</li>
+              <li><i class="sui sui-check" style="color:#999"></i> планка упорная (1–2 камера)</li>
+              <li><i class="sui sui-check" style="color:#999"></i> планка упорная (3–4 камера)</li>
+              <li><i class="sui sui-check" style="color:#999"></i> клинья</li>
+              <li><i class="sui sui-check" style="color:#999"></i> ножи</li>
+              <li><i class="sui sui-check" style="color:#999"></i> кольца и полукольца</li>
+              <li><i class="sui sui-check" style="color:#999"></i> кольцо конусное</li>
+              <li><i class="sui sui-check" style="color:#999"></i> кольцо промежуточное</li>
+              <li><i class="sui sui-check" style="color:#999"></i> конусы</li>
+              <li><i class="sui sui-check" style="color:#999"></i> валы</li>
+              <li><i class="sui sui-check" style="color:#999"></i> втулка бронзовая</li>
+              <li><i class="sui sui-check" style="color:#999"></i> втулка конуса</li>
+              <li><i class="sui sui-check" style="color:#999"></i> звено шнека</li>
+              <li><i class="sui sui-check" style="color:#999"></i> скребок</li>
+              <li><i class="sui sui-check" style="color:#999"></i> регулирующее устройство</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="zip-cards">
+        <div class="zip-card">
+          <a data-gal="prettyPhoto[zapchasti]"
+             href="{% static 'pages/img/zapchasti/zapchast-4.jpg' %}">
+            <img src="{% static 'pages/img/zapchasti/zapchast-4.jpg' %}"
+                 alt="Запчасти для маслопресса"
+                 loading="lazy">
+          </a>
+          <span class="zip-card__caption">Запчасти для маслопресса</span>
+        </div>
+        <div class="zip-card">
+          <a data-gal="prettyPhoto[zapchasti]"
+             href="{% static 'pages/img/zapchasti/zapchast-5.jpg' %}">
+            <img src="{% static 'pages/img/zapchasti/zapchast-5.jpg' %}"
+                 alt="Втулка бронзовая маслопресса"
+                 loading="lazy">
+          </a>
+          <span class="zip-card__caption">Втулка бронзовая маслопресса</span>
+        </div>
+        <div class="zip-card">
+          <a data-gal="prettyPhoto[zapchasti]"
+             href="{% static 'pages/img/zapchasti/zapchast-6.jpg' %}">
+            <img src="{% static 'pages/img/zapchasti/zapchast-6.jpg' %}"
+                 alt="Кольцо промежуточное"
+                 loading="lazy">
+          </a>
+          <span class="zip-card__caption">Кольцо промежуточное</span>
+        </div>
+        <div class="zip-card">
+          <a data-gal="prettyPhoto[zapchasti]"
+             href="{% static 'pages/img/zapchasti/zapchast-7.jpg' %}">
+            <img src="{% static 'pages/img/zapchasti/zapchast-7.jpg' %}"
+                 alt="Втулка конуса маслопресса"
+                 loading="lazy">
+          </a>
+          <span class="zip-card__caption">Втулка конуса маслопресса</span>
+        </div>
+        <div class="zip-card">
+          <a data-gal="prettyPhoto[zapchasti]"
+             href="{% static 'pages/img/zapchasti/zapchast-8.jpg' %}">
+            <img src="{% static 'pages/img/zapchasti/zapchast-8.jpg' %}"
+                 alt="Звено шнека маслопресса"
+                 loading="lazy">
+          </a>
+          <span class="zip-card__caption">Звено шнека маслопресса</span>
+        </div>
+        <div class="zip-card">
+          <a data-gal="prettyPhoto[zapchasti]"
+             href="{% static 'pages/img/zapchasti/zapchast-9.jpg' %}">
+            <img src="{% static 'pages/img/zapchasti/zapchast-9.jpg' %}"
+                 alt="Звено шнека маслопресса"
+                 loading="lazy">
+          </a>
+          <span class="zip-card__caption">Звено шнека маслопресса</span>
+        </div>
+        <div class="zip-card">
+          <a data-gal="prettyPhoto[zapchasti]"
+             href="{% static 'pages/img/zapchasti/zapchast-10.jpg' %}">
+            <img src="{% static 'pages/img/zapchasti/zapchast-10.jpg' %}"
+                 alt="Планка упорная"
+                 loading="lazy">
+          </a>
+          <span class="zip-card__caption">Планка упорная</span>
+        </div>
+        <div class="zip-card">
+          <a data-gal="prettyPhoto[zapchasti]"
+             href="{% static 'pages/img/zapchasti/zapchast-11.jpg' %}">
+            <img src="{% static 'pages/img/zapchasti/zapchast-11.jpg' %}"
+                 alt="Планка упорная"
+                 loading="lazy">
+          </a>
+          <span class="zip-card__caption">Планка упорная</span>
+        </div>
+        <div class="zip-card">
+          <a data-gal="prettyPhoto[zapchasti]"
+             href="{% static 'pages/img/zapchasti/zapchast-12.jpg' %}">
+            <img src="{% static 'pages/img/zapchasti/zapchast-12.jpg' %}"
+                 alt="Планка упорная"
+                 loading="lazy">
+          </a>
+          <span class="zip-card__caption">Планка упорная</span>
+        </div>
+        <div class="zip-card">
+          <a data-gal="prettyPhoto[zapchasti]"
+             href="{% static 'pages/img/zapchasti/zapchast-13.jpg' %}">
+            <img src="{% static 'pages/img/zapchasti/zapchast-13.jpg' %}"
+                 alt="Кольцо конусное маслопресса"
+                 loading="lazy">
+          </a>
+          <span class="zip-card__caption">Кольцо конусное маслопресса</span>
+        </div>
+      </div>
+      <h2>Качество и поставка</h2>
+      <p>Запасные части и быстроизнашиваемые детали к маслопрессам производитель выпускает уже более полувека. Детали изготавливаются из лучших марок стали с применением специальной технологии закаливания и восьми видов термической обработки — это гарантирует их ресурс и надёжность.</p>
+      <p>Мы поставляем комплекты запасных частей и расходных материалов по всей России и странам СНГ. По вопросам приобретения, сотрудничества и за дополнительной информацией свяжитесь с нами любым удобным способом.</p>
+      <p>
+        <a class="rad ribbon"
+           href="{% url 'catalog:product_list' %}?category=zapchasti-i-emkosti">Все запчасти в каталоге →</a>
+        &nbsp;
+        <a class="rad ribbon" href="{% url 'pages:contacts' %}">Связаться с нами</a>
+      </p>
+      <div class="postinfo p-border">
+        <span class="bread meta p-border">
+          <a href="/"><i class="fas fa-home"></i></a>
+          <i class="fas fa-angle-right"></i>
+          Запасные части для маслопрессов
+        </span>
+      </div>
+    </div>
+  </div>
+{% endblock content %}
