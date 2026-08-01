@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Контакты — МАСЛОПРЕССЗАВОД - Prodtehmas SRL{% endblock title %}
+{% block description %}Контакты Prodtehmas SRL: г. Кишинёв, ул. М. Маноле, 12. Телефоны, email и форма обратной связи для вопросов приобретения и сотрудничества.{% endblock description %}
+{% block og_title %}Контакты — Prodtehmas SRL{% endblock og_title %}
+{% block og_description %}Свяжитесь с Prodtehmas SRL: телефоны, email и форма обратной связи.{% endblock og_description %}
+{% block body_class %}page page-template-template-fullwidth upper{% endblock body_class %}
+{% block content %}
+  {# плашка-заголовок без баннера — только серая полоса с h1 (как в оригинале) #}
+  <div class="page-header p-border">
+    <div class="container">
+      <h1>Контакты</h1>
+    </div>
+  </div>
+  <div class="container container_alt">
+    <div id="core">
+      <div class="entry entryfull">
+        <div class="su-row">
+          {# левая колонка (2/3): форма обратной связи #}
+          <div class="su-column su-column-size-2-3">
+            <div class="su-column-inner su-u-clearfix su-u-trim">
+              <p class="western">Для связи используйте форму, приведённую ниже.</p>
+              {% include 'pages/_contact_form.html' %}
+            </div>
+          </div>
+          {# правая колонка (1/3): контактные данные + карта #}
+          <div class="su-column su-column-size-1-3">
+            <div class="su-column-inner su-u-clearfix su-u-trim">
+              <p class="western"><strong>Prodtehmas SRL</strong></p>
+              <p class="western"><i class="fas fa-address-card"></i> 2044, Молдова, г. Кишинёв, ул. М. Маноле, 12</p>
+              <p class="western"><i class="fas fa-phone"></i> Тел. <a title="Позвонить" href="tel:+37322471225">+373 22 47 12 25</a></p>
+              <p class="western"><i class="fas fa-phone"></i> Тел. <a title="Позвонить" href="tel:+37322853717">+373 22 85 37 17</a></p>
+              <p class="western"><i class="fas fa-mobile"></i> Моб. <a title="Позвонить" href="tel:+37378880048">+373 78 880 048</a> <i class="fab fa-whatsapp"></i> <i class="fab fa-viber"></i></p>
+              <p class="western"><i class="fas fa-mobile"></i> Моб. <a title="Позвонить" href="tel:+37379747302">+373 79 747 302</a> <i class="fab fa-whatsapp"></i> <i class="fab fa-viber"></i></p>
+              <p class="western"><i class="fas fa-mobile"></i> Моб. <a title="Позвонить" href="tel:+37369911600">+373 69 911 600</a> <i class="fab fa-whatsapp"></i> <i class="fab fa-viber"></i></p>
+              <p class="western"><i class="fas fa-envelope"></i> <a style="color:#7dd1e3;" href="mailto:prodtehmas@gmail.com">prodtehmas@gmail.com</a></p>
+              <p class="western"><i class="fas fa-envelope"></i> <a style="color:#7dd1e3;" href="mailto:prodtehmas@inbox.ru">prodtehmas@inbox.ru</a></p>
+              <p class="western"><i class="fab fa-internet-explorer"></i> <a href="/"><span style="color:#7dd1e3;">www.prodtehmas.com</span></a></p>
+              <div class="su-gmap su-u-responsive-media-yes">
+                <iframe src="https://www.google.com/maps?q=Strada+Mesterul+Manole+12,+Chisinau,+Moldova&output=embed"
+                        title="Карта — Кишинёв, ул. М. Маноле, 12"
+                        loading="lazy"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+{% endblock content %}
