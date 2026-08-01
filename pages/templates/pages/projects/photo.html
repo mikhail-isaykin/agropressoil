@@ -1,0 +1,410 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Фото проектов — Prodtehmas SRL{% endblock title %}
+{% block description %}Фото наших проектов и реализованных индивидуальных решений для технологического оборудования пищевой промышленности.{% endblock description %}
+{% block og_title %}Фото проектов — Prodtehmas SRL{% endblock og_title %}
+{% block og_description %}Фото реализованных проектов и оборудования Prodtehmas SRL.{% endblock og_description %}
+{% block body_class %}page page-template-template-fullwidth upper{% endblock body_class %}
+{% block content %}
+  <div class="page-header p-border">
+    <img src="{% static 'pages/img/projects/photo.jpg' %}"
+         width="1646"
+         height="370"
+         class="page-header-img grayscale grayscale-fade wp-post-image"
+         alt="Фото проектов Prodtehmas SRL">
+    <div class="container">
+      <h1>Фото проектов Prodtehmas SRL</h1>
+    </div>
+  </div>
+  <div class="container container_alt">
+    <div id="core">
+      <div class="entry entryfull">
+        <h2 class="wp-block-heading">Компания Prodtehmas SRL — фото проектов</h2>
+        <p>Prodtehmas SRL — это компания, которая специализируется на разработке и поставке оборудования для различных отраслей промышленности. Одним из важных аспектов их работы является проектирование и реализация различных проектов для своих клиентов.</p>
+        <p>В рамках своих проектов компания Prodtehmas SRL предоставляет не только качественное оборудование, но и разработку индивидуальных решений, учитывающих потребности и требования каждого клиента. Компания всегда стремится к инновациям и предоставлению самых передовых решений, что можно увидеть на фото, а также к выполнению проектов в срок и в рамках установленного бюджета.</p>
+        <p>На сайте компании Prodtehmas SRL можно найти множество фото проектов, которые были реализованы компанией. Некоторые из них мы представляем ниже:</p>
+        {% comment %}
+          Галерея проектов (Shortcodes Ultimate). Лайтбокс при клике требует JS-плагина
+          SU, которого у нас нет — пока клик просто открывает миниатюру. Картинки —
+          уменьшенные (200×200); если понадобятся полноразмерные в попапе, заменим.
+        {% endcomment %}
+        <div class="su-custom-gallery su-custom-gallery-align-left su-custom-gallery-title-always su-lightbox-gallery">
+          <div class="su-custom-gallery-slide" style="width:200px;height:200px">
+            <a href="{% static 'pages/img/projects/gallery/prodtehmassrl-19.jpg' %}"
+               title="Участок очистки масла. Рафинация">
+              <img src="{% static 'pages/img/projects/gallery/prodtehmassrl-19.jpg' %}"
+                   alt="Участок очистки масла. Рафинация"
+                   width="200"
+                   height="200">
+              <span class="su-custom-gallery-title">Участок очистки масла. Рафинация</span>
+            </a>
+          </div>
+          <div class="su-custom-gallery-slide" style="width:200px;height:200px">
+            <a href="{% static 'pages/img/projects/gallery/prodtehmassrl-18.jpg' %}"
+               title="Участок очистки масла. Рафинация">
+              <img src="{% static 'pages/img/projects/gallery/prodtehmassrl-18.jpg' %}"
+                   alt="Участок очистки масла. Рафинация"
+                   width="200"
+                   height="200">
+              <span class="su-custom-gallery-title">Участок очистки масла. Рафинация</span>
+            </a>
+          </div>
+          <div class="su-custom-gallery-slide" style="width:200px;height:200px">
+            <a href="{% static 'pages/img/projects/gallery/prodtehmassrl-17.jpg' %}"
+               title="Участок очистки и сушки семян">
+              <img src="{% static 'pages/img/projects/gallery/prodtehmassrl-17.jpg' %}"
+                   alt="Участок очистки и сушки семян"
+                   width="200"
+                   height="200">
+              <span class="su-custom-gallery-title">Участок очистки и сушки семян</span>
+            </a>
+          </div>
+          <div class="su-custom-gallery-slide" style="width:200px;height:200px">
+            <a href="{% static 'pages/img/projects/gallery/prodtehmassrl-16.jpg' %}"
+               title="Участок очистки и сушки семян. Сушильная установка">
+              <img src="{% static 'pages/img/projects/gallery/prodtehmassrl-16.jpg' %}"
+                   alt="Участок очистки и сушки семян. Сушильная установка"
+                   width="200"
+                   height="200">
+              <span class="su-custom-gallery-title">Участок очистки и сушки семян. Сушильная установка</span>
+            </a>
+          </div>
+          <div class="su-custom-gallery-slide" style="width:200px;height:200px">
+            <a href="{% static 'pages/img/projects/gallery/prodtehmassrl-15.jpg' %}"
+               title="Участок очистки и сушки семян">
+              <img src="{% static 'pages/img/projects/gallery/prodtehmassrl-15.jpg' %}"
+                   alt="Участок очистки и сушки семян"
+                   width="200"
+                   height="200">
+              <span class="su-custom-gallery-title">Участок очистки и сушки семян</span>
+            </a>
+          </div>
+          <div class="su-custom-gallery-slide" style="width:200px;height:200px">
+            <a href="{% static 'pages/img/projects/gallery/prodtehmassrl-14.jpg' %}"
+               title="Участок дезодорации">
+              <img src="{% static 'pages/img/projects/gallery/prodtehmassrl-14.jpg' %}"
+                   alt="Участок дезодорации"
+                   width="200"
+                   height="200">
+              <span class="su-custom-gallery-title">Участок дезодорации</span>
+            </a>
+          </div>
+          <div class="su-custom-gallery-slide" style="width:200px;height:200px">
+            <a href="{% static 'pages/img/projects/gallery/prodtehmassrl-13.jpg' %}"
+               title="Участок дезодорации">
+              <img src="{% static 'pages/img/projects/gallery/prodtehmassrl-13.jpg' %}"
+                   alt="Участок дезодорации"
+                   width="200"
+                   height="200">
+              <span class="su-custom-gallery-title">Участок дезодорации</span>
+            </a>
+          </div>
+          <div class="su-custom-gallery-slide" style="width:200px;height:200px">
+            <a href="{% static 'pages/img/projects/gallery/prodtehmassrl-12.jpg' %}"
+               title="Участок двукратного прессования">
+              <img src="{% static 'pages/img/projects/gallery/prodtehmassrl-12.jpg' %}"
+                   alt="Участок двукратного прессования"
+                   width="200"
+                   height="200">
+              <span class="su-custom-gallery-title">Участок двукратного прессования</span>
+            </a>
+          </div>
+          <div class="su-custom-gallery-slide" style="width:200px;height:200px">
+            <a href="{% static 'pages/img/projects/gallery/prodtehmassrl-11.jpg' %}"
+               title="Технологические емкости для масла">
+              <img src="{% static 'pages/img/projects/gallery/prodtehmassrl-11.jpg' %}"
+                   alt="Технологические емкости для масла"
+                   width="200"
+                   height="200">
+              <span class="su-custom-gallery-title">Технологические емкости для масла</span>
+            </a>
+          </div>
+          <div class="su-custom-gallery-slide" style="width:200px;height:200px">
+            <a href="{% static 'pages/img/projects/gallery/prodtehmassrl-10.jpg' %}"
+               title="Комплект оборудования по переработке семян">
+              <img src="{% static 'pages/img/projects/gallery/prodtehmassrl-10.jpg' %}"
+                   alt="Комплект оборудования по переработке семян"
+                   width="200"
+                   height="200">
+              <span class="su-custom-gallery-title">Комплект оборудования по переработке семян</span>
+            </a>
+          </div>
+          <div class="su-custom-gallery-slide" style="width:200px;height:200px">
+            <a href="{% static 'pages/img/projects/gallery/prodtehmassrl-09.jpg' %}"
+               title="Комплект оборудования по переработке семян подсолнечника">
+              <img src="{% static 'pages/img/projects/gallery/prodtehmassrl-09.jpg' %}"
+                   alt="Комплект оборудования по переработке семян подсолнечника"
+                   width="200"
+                   height="200">
+              <span class="su-custom-gallery-title">Комплект оборудования по переработке семян подсолнечника</span>
+            </a>
+          </div>
+          <div class="su-custom-gallery-slide" style="width:200px;height:200px">
+            <a href="{% static 'pages/img/projects/gallery/prodtehmassrl-08.jpg' %}"
+               title="Комплект оборудования по переработке семян подсолнечника">
+              <img src="{% static 'pages/img/projects/gallery/prodtehmassrl-08.jpg' %}"
+                   alt="Комплект оборудования по переработке семян подсолнечника"
+                   width="200"
+                   height="200">
+              <span class="su-custom-gallery-title">Комплект оборудования по переработке семян подсолнечника</span>
+            </a>
+          </div>
+          <div class="su-custom-gallery-slide" style="width:200px;height:200px">
+            <a href="{% static 'pages/img/projects/gallery/prodtehmassrl-07.jpg' %}"
+               title="Комплект оборудования для переработки семян рапса">
+              <img src="{% static 'pages/img/projects/gallery/prodtehmassrl-07.jpg' %}"
+                   alt="Комплект оборудования для переработки семян рапса"
+                   width="200"
+                   height="200">
+              <span class="su-custom-gallery-title">Комплект оборудования для переработки семян рапса</span>
+            </a>
+          </div>
+          <div class="su-custom-gallery-slide" style="width:200px;height:200px">
+            <a href="{% static 'pages/img/projects/gallery/prodtehmassrl-06.jpg' %}"
+               title="Комплекс по производству растительного масла из семян масличных культур">
+              <img src="{% static 'pages/img/projects/gallery/prodtehmassrl-06.jpg' %}"
+                   alt="Комплекс по производству растительного масла из семян масличных культур"
+                   width="200"
+                   height="200">
+              <span class="su-custom-gallery-title">Комплекс по производству растительного масла из семян масличных культур</span>
+            </a>
+          </div>
+          <div class="su-custom-gallery-slide" style="width:200px;height:200px">
+            <a href="{% static 'pages/img/projects/gallery/prodtehmassrl-05.jpg' %}"
+               title="Завод по переработке семян масличных культур">
+              <img src="{% static 'pages/img/projects/gallery/prodtehmassrl-05.jpg' %}"
+                   alt="Завод по переработке семян масличных культур"
+                   width="200"
+                   height="200">
+              <span class="su-custom-gallery-title">Завод по переработке семян масличных культур</span>
+            </a>
+          </div>
+          <div class="su-custom-gallery-slide" style="width:200px;height:200px">
+            <a href="{% static 'pages/img/projects/gallery/prodtehmassrl-04.jpg' %}"
+               title="Завод по переработке семян масличных культур">
+              <img src="{% static 'pages/img/projects/gallery/prodtehmassrl-04.jpg' %}"
+                   alt="Завод по переработке семян масличных культур"
+                   width="200"
+                   height="200">
+              <span class="su-custom-gallery-title">Завод по переработке семян масличных культур</span>
+            </a>
+          </div>
+          <div class="su-custom-gallery-slide" style="width:200px;height:200px">
+            <a href="{% static 'pages/img/projects/gallery/prodtehmassrl-03.jpg' %}"
+               title="Завод по переработке семян масличных культур">
+              <img src="{% static 'pages/img/projects/gallery/prodtehmassrl-03.jpg' %}"
+                   alt="Завод по переработке семян масличных культур"
+                   width="200"
+                   height="200">
+              <span class="su-custom-gallery-title">Завод по переработке семян масличных культур</span>
+            </a>
+          </div>
+          <div class="su-custom-gallery-slide" style="width:200px;height:200px">
+            <a href="{% static 'pages/img/projects/gallery/prodtehmassrl-02.jpg' %}"
+               title="Автоматический комплекс для утилизации отходов маслопроизводства (лузги)">
+              <img src="{% static 'pages/img/projects/gallery/prodtehmassrl-02.jpg' %}"
+                   alt="Автоматический комплекс для утилизации отходов маслопроизводства (лузги)"
+                   width="200"
+                   height="200">
+              <span class="su-custom-gallery-title">Автоматический комплекс для утилизации отходов маслопроизводства (лузги)</span>
+            </a>
+          </div>
+          <div class="su-custom-gallery-slide" style="width:200px;height:200px">
+            <a href="{% static 'pages/img/projects/gallery/prodtehmassrl-01.jpg' %}"
+               title="Автоматический комплекс для утилизации отходов маслопроизводства (лузги)">
+              <img src="{% static 'pages/img/projects/gallery/prodtehmassrl-01.jpg' %}"
+                   alt="Автоматический комплекс для утилизации отходов маслопроизводства (лузги)"
+                   width="200"
+                   height="200">
+              <span class="su-custom-gallery-title">Автоматический комплекс для утилизации отходов маслопроизводства (лузги)</span>
+            </a>
+          </div>
+          <div class="su-custom-gallery-slide" style="width:200px;height:200px">
+            <a href="{% static 'pages/img/projects/gallery/prodtehmassrl-37.jpg' %}"
+               title="Участок прессования. Пресс М8-МШП">
+              <img src="{% static 'pages/img/projects/gallery/prodtehmassrl-37.jpg' %}"
+                   alt="Участок прессования. Пресс М8-МШП"
+                   width="200"
+                   height="200">
+              <span class="su-custom-gallery-title">Участок прессования. Пресс М8-МШП</span>
+            </a>
+          </div>
+          <div class="su-custom-gallery-slide" style="width:200px;height:200px">
+            <a href="{% static 'pages/img/projects/gallery/prodtehmassrl-36.jpg' %}"
+               title="Участок прессования. Подача жмыха на дожим">
+              <img src="{% static 'pages/img/projects/gallery/prodtehmassrl-36.jpg' %}"
+                   alt="Участок прессования. Подача жмыха на дожим"
+                   width="200"
+                   height="200">
+              <span class="su-custom-gallery-title">Участок прессования. Подача жмыха на дожим</span>
+            </a>
+          </div>
+          <div class="su-custom-gallery-slide" style="width:200px;height:200px">
+            <a href="{% static 'pages/img/projects/gallery/prodtehmassrl-35.jpg' %}"
+               title="Участок прессования. Первичное прессование">
+              <img src="{% static 'pages/img/projects/gallery/prodtehmassrl-35.jpg' %}"
+                   alt="Участок прессования. Первичное прессование"
+                   width="200"
+                   height="200">
+              <span class="su-custom-gallery-title">Участок прессования. Первичное прессование</span>
+            </a>
+          </div>
+          <div class="su-custom-gallery-slide" style="width:200px;height:200px">
+            <a href="{% static 'pages/img/projects/gallery/prodtehmassrl-34.jpg' %}"
+               title="Участок прессования. Маслопресс М8-МШП">
+              <img src="{% static 'pages/img/projects/gallery/prodtehmassrl-34.jpg' %}"
+                   alt="Участок прессования. Маслопресс М8-МШП"
+                   width="200"
+                   height="200">
+              <span class="su-custom-gallery-title">Участок прессования. Маслопресс М8-МШП</span>
+            </a>
+          </div>
+          <div class="su-custom-gallery-slide" style="width:200px;height:200px">
+            <a href="{% static 'pages/img/projects/gallery/prodtehmassrl-33.jpg' %}"
+               title="Участок прессования методом двукратного горячего прессования">
+              <img src="{% static 'pages/img/projects/gallery/prodtehmassrl-33.jpg' %}"
+                   alt="Участок прессования методом двукратного горячего прессования"
+                   width="200"
+                   height="200">
+              <span class="su-custom-gallery-title">Участок прессования методом двукратного горячего прессования</span>
+            </a>
+          </div>
+          <div class="su-custom-gallery-slide" style="width:200px;height:200px">
+            <a href="{% static 'pages/img/projects/gallery/prodtehmassrl-32.jpg' %}"
+               title="Участок прессования — Сбор масла">
+              <img src="{% static 'pages/img/projects/gallery/prodtehmassrl-32.jpg' %}"
+                   alt="Участок прессования — Сбор масла"
+                   width="200"
+                   height="200">
+              <span class="su-custom-gallery-title">Участок прессования — Сбор масла</span>
+            </a>
+          </div>
+          <div class="su-custom-gallery-slide" style="width:200px;height:200px">
+            <a href="{% static 'pages/img/projects/gallery/prodtehmassrl-31.jpg' %}"
+               title="Участок прессования — Вторичный отжим">
+              <img src="{% static 'pages/img/projects/gallery/prodtehmassrl-31.jpg' %}"
+                   alt="Участок прессования — Вторичный отжим"
+                   width="200"
+                   height="200">
+              <span class="su-custom-gallery-title">Участок прессования — Вторичный отжим</span>
+            </a>
+          </div>
+          <div class="su-custom-gallery-slide" style="width:200px;height:200px">
+            <a href="{% static 'pages/img/projects/gallery/prodtehmassrl-30.jpg' %}"
+               title="Участок подготовки семян. Шелушение семян подсолнечника">
+              <img src="{% static 'pages/img/projects/gallery/prodtehmassrl-30.jpg' %}"
+                   alt="Участок подготовки семян. Шелушение семян подсолнечника"
+                   width="200"
+                   height="200">
+              <span class="su-custom-gallery-title">Участок подготовки семян. Шелушение семян подсолнечника</span>
+            </a>
+          </div>
+          <div class="su-custom-gallery-slide" style="width:200px;height:200px">
+            <a href="{% static 'pages/img/projects/gallery/prodtehmassrl-29.jpg' %}"
+               title="Участок подготовки семян. Шелушение семян подсолнечника">
+              <img src="{% static 'pages/img/projects/gallery/prodtehmassrl-29.jpg' %}"
+                   alt="Участок подготовки семян. Шелушение семян подсолнечника"
+                   width="200"
+                   height="200">
+              <span class="su-custom-gallery-title">Участок подготовки семян. Шелушение семян подсолнечника</span>
+            </a>
+          </div>
+          <div class="su-custom-gallery-slide" style="width:200px;height:200px">
+            <a href="{% static 'pages/img/projects/gallery/prodtehmassrl-28.jpg' %}"
+               title="Участок подготовки семян. Подача семян подсолнечника на шелушение">
+              <img src="{% static 'pages/img/projects/gallery/prodtehmassrl-28.jpg' %}"
+                   alt="Участок подготовки семян. Подача семян подсолнечника на шелушение"
+                   width="200"
+                   height="200">
+              <span class="su-custom-gallery-title">Участок подготовки семян. Подача семян подсолнечника на шелушение</span>
+            </a>
+          </div>
+          <div class="su-custom-gallery-slide" style="width:200px;height:200px">
+            <a href="{% static 'pages/img/projects/gallery/prodtehmassrl-27.jpg' %}"
+               title="Участок очистки масла. Финишная фильтрация">
+              <img src="{% static 'pages/img/projects/gallery/prodtehmassrl-27.jpg' %}"
+                   alt="Участок очистки масла. Финишная фильтрация"
+                   width="200"
+                   height="200">
+              <span class="su-custom-gallery-title">Участок очистки масла. Финишная фильтрация</span>
+            </a>
+          </div>
+          <div class="su-custom-gallery-slide" style="width:200px;height:200px">
+            <a href="{% static 'pages/img/projects/gallery/prodtehmassrl-26.jpg' %}"
+               title="Участок очистки масла. Финишная фильтрация и рафинация">
+              <img src="{% static 'pages/img/projects/gallery/prodtehmassrl-26.jpg' %}"
+                   alt="Участок очистки масла. Финишная фильтрация и рафинация"
+                   width="200"
+                   height="200">
+              <span class="su-custom-gallery-title">Участок очистки масла. Финишная фильтрация и рафинация</span>
+            </a>
+          </div>
+          <div class="su-custom-gallery-slide" style="width:200px;height:200px">
+            <a href="{% static 'pages/img/projects/gallery/prodtehmassrl-25.jpg' %}"
+               title="Участок очистки масла. Финишная фильтрация и рафинация">
+              <img src="{% static 'pages/img/projects/gallery/prodtehmassrl-25.jpg' %}"
+                   alt="Участок очистки масла. Финишная фильтрация и рафинация"
+                   width="200"
+                   height="200">
+              <span class="su-custom-gallery-title">Участок очистки масла. Финишная фильтрация и рафинация</span>
+            </a>
+          </div>
+          <div class="su-custom-gallery-slide" style="width:200px;height:200px">
+            <a href="{% static 'pages/img/projects/gallery/prodtehmassrl-24.jpg' %}"
+               title="Участок очистки масла. Финишная фильтрация">
+              <img src="{% static 'pages/img/projects/gallery/prodtehmassrl-24.jpg' %}"
+                   alt="Участок очистки масла. Финишная фильтрация"
+                   width="200"
+                   height="200">
+              <span class="su-custom-gallery-title">Участок очистки масла. Финишная фильтрация</span>
+            </a>
+          </div>
+          <div class="su-custom-gallery-slide" style="width:200px;height:200px">
+            <a href="{% static 'pages/img/projects/gallery/prodtehmassrl-23.jpg' %}"
+               title="Участок очистки масла. Фильтрация">
+              <img src="{% static 'pages/img/projects/gallery/prodtehmassrl-23.jpg' %}"
+                   alt="Участок очистки масла. Фильтрация"
+                   width="200"
+                   height="200">
+              <span class="su-custom-gallery-title">Участок очистки масла. Фильтрация</span>
+            </a>
+          </div>
+          <div class="su-custom-gallery-slide" style="width:200px;height:200px">
+            <a href="{% static 'pages/img/projects/gallery/prodtehmassrl-22.jpg' %}"
+               title="Участок очистки масла. Фильтрация">
+              <img src="{% static 'pages/img/projects/gallery/prodtehmassrl-22.jpg' %}"
+                   alt="Участок очистки масла. Фильтрация"
+                   width="200"
+                   height="200">
+              <span class="su-custom-gallery-title">Участок очистки масла. Фильтрация</span>
+            </a>
+          </div>
+          <div class="su-custom-gallery-slide" style="width:200px;height:200px">
+            <a href="{% static 'pages/img/projects/gallery/prodtehmassrl-21.jpg' %}"
+               title="Участок очистки масла. Рафинация">
+              <img src="{% static 'pages/img/projects/gallery/prodtehmassrl-21.jpg' %}"
+                   alt="Участок очистки масла. Рафинация"
+                   width="200"
+                   height="200">
+              <span class="su-custom-gallery-title">Участок очистки масла. Рафинация</span>
+            </a>
+          </div>
+          <div class="su-custom-gallery-slide" style="width:200px;height:200px">
+            <a href="{% static 'pages/img/projects/gallery/prodtehmassrl-20.jpg' %}"
+               title="Участок очистки масла. Рафинация">
+              <img src="{% static 'pages/img/projects/gallery/prodtehmassrl-20.jpg' %}"
+                   alt="Участок очистки масла. Рафинация"
+                   width="200"
+                   height="200">
+              <span class="su-custom-gallery-title">Участок очистки масла. Рафинация</span>
+            </a>
+          </div>
+          <div class="su-clear"></div>
+        </div>
+        <h2 class="wp-block-heading">Оформить заявку на <a href="#"><strong>оборудование для отжима и обработки масла</strong></a> или получить консультацию можно, заполнив форму ниже. Больше контактной информации на странице <a href="{% url 'pages:contacts' %}"><strong>Контакты</strong></a>.</h2>
+        {% include 'pages/_contact_form.html' %}
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+{% endblock content %}
