@@ -1,0 +1,25 @@
+{% extends 'pages/innovations/_base.html' %}
+{% load static %}
+{% block title %}Участок подготовки семян — Prodtehmas SRL{% endblock title %}
+{% block description %}Участок подготовки семян: окончательная подготовка семян к переработке — обрушивание на машине шелушения и смятие на вальцевой зерноплющилке.{% endblock description %}
+{% block stage_title %}Участок подготовки семян{% endblock stage_title %}
+{% block stage_body %}
+  <div class="wp-caption aligncenter" style="width: 510px">
+    <a href="{% static 'pages/img/innovations/uchastok-prod.jpg' %}"
+       data-gal="prettyPhoto"
+       rel="prettyPhoto">
+      <img src="{% static 'pages/img/innovations/uchastok-prod.jpg' %}"
+           alt="Участок подготовки семян"
+           width="500"
+           height="500">
+    </a>
+    <p class="wp-caption-text">Участок подготовки семян</p>
+  </div>
+  <p>Данный участок предназначен для окончательной подготовки семян к переработке.</p>
+  <p><strong>Включает следующие операции:</strong></p>
+  <ul>
+    <li><strong>Обрушивание</strong> — предварительно очищенное и просушенное зерно поступает на <strong><a href="#">машину шелушения семян подсолнечника</a></strong>, где происходит разделение обрушенных семян на лузгу и другие составляющие (ядро, целяк, сечку, недоруш) и удаление необходимого количества лузги для дальнейшего использования в технологических процессах или утилизации.</li>
+    <li><strong>Смятие</strong> — обрушенное исходное сырьё и части лузги поступают на <strong><a href="#">вальцевую зерноплющилку</a></strong>, где семена (подсолнечника, рапса, льна, сафлора и др.) сминаются и получается мятка.</li>
+  </ul>
+  <p>По вопросам технических характеристик, принципов работы и состава оборудования можно ознакомиться на странице сайта в разделе <strong><a href="#">«Каталог»</a></strong>.</p>
+{% endblock stage_body %}
