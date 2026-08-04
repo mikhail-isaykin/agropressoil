@@ -1,0 +1,514 @@
+/* @containers
+********************************************************************************************
+********************************************************************************************/
+
+
+.container,
+.container_alt {
+width: 100%;
+max-width: 1260px;
+margin: 0 auto;
+padding:0 0;
+overflow:hidden;
+position:relative;
+}
+
+.container_pad{padding:0 20px;}
+
+.container_alt{ overflow:visible;}
+
+.aq_span12{ width:100% !important;}
+
+/* @columns
+********************************************************************************************
+********************************************************************************************/
+
+.onecol, .twocol, .threecol, .fourcol, .fivecol,.fifthcol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol,.warpbox {
+margin-left:0;
+float: left;
+min-height: 1px;
+}
+
+.foocol{
+margin:0 0 -1px 0;
+width:17.7%;
+padding: 0 40px 5px 40px;
+position:relative;
+height:100%;
+min-height:1px;
+float:left;
+border-top-style:solid;
+border-top-width:1px;
+border-right-style:solid;
+border-right-width:1px;
+}
+
+.foocol.first{
+width:29%;
+padding-left:0;
+}
+
+.foocol.last{
+padding-right:0;
+border-right: none;
+}
+
+/*sidebar*/
+.fourcol,
+#foliosidebar{ width:27%; margin:0 0 0 0; padding:0 0;}
+
+#foliosidebar{ float:left;}
+
+/*content*/
+.eightcol,
+#foliocontent{ width:73%; margin:0 0 0 0; float:left;}
+
+
+/*1/4*/
+.aq-block-aq_4_column_block{ width:25%; padding:0 20px;margin:0 0 0 0 !important;}
+/*1/3*/
+.aq-block-aq_3_column_block{ width:33.33%; padding:0 20px;margin:0 0 0 0 !important;}
+/*2/3*/
+.aq-block-aq_2_3_column_block{width:66.66%;padding:0 20px; margin:0 0 0 0 !important;}
+/*1/2*/
+.aq-block-aq_2_column_block{ width:50%; padding:0 20px;margin:0 0 0 0 !important;}
+
+
+/*
+testing
+.aq-block-aq_4_column_block,.aq-block-aq_3_column_block,.aq-block-aq_2_3_column_block,.aq-block-aq_2_column_block{background:#bbb; min-height:300px; box-shadow: -1px -2px 0 rgba(0, 0, 0, 0.2) inset;}*/
+
+
+/* blocks fixes */
+
+.builder .fourcol,
+.builder .aq-block-aq_3_column_block,
+.builder .eightcol,
+.builder .aq-block-aq_2_3_column_block{ margin-top:0px !important;}
+
+
+/* sidebar position */
+.postbarLeft .eightcol,
+.postbarLeft .aq-block-aq_2_3_column_block{ float: right !important}
+.foliobarRight #foliosidebar{ float: right !important}
+
+.postbarNone .eightcol,
+.postbarNone .aq-block-aq_2_3_column_block{ width:100%;}
+
+.postbarNone .entryhead iframe,
+.foliobarNone iframe{ width:100%;}
+
+#foliosidebar .widgetable{ margin:0 20px;}
+
+
+.sixcol{width:50%}
+
+.fourcol,
+.aq-block-aq_3_column_block,
+.eightcol,
+.aq-block-aq_2_3_column_block{ margin:0 0 50px 0; }
+
+.first,
+.aq-first {margin-left: 0px !important;}
+
+.widgetable{ padding:0 0 0 0; margin:0 20px; overflow:hidden;}
+
+
+
+/* @responsive mode
+********************************************************************************************
+********************************************************************************************/
+
+@media screen and (max-width: 1320px) {
+
+.flexinside{ top:50px;}
+
+}
+
+@media screen and (max-width: 1225px) {
+
+.flexinside{ left:20px; margin:0 0 0 0; max-width:45%; }
+
+.mainflex .flex-direction-nav{ left:20px; margin:0 0 0 0; bottom:25px;}
+
+}
+
+
+/* iPad Landscape */
+@media screen and (max-width: 1030px) {
+	
+#titles {
+    margin-bottom: 30px !important;
+    margin-top: 30px !important;
+}
+
+.flexinside h1{font-size:24px !important; line-height:1.0 !important; padding:0 20px;}
+
+.flexinside-inn{padding: 15px 20px;}
+
+.flexinside p{font-size:85%;}
+
+#main-nav > li > a{margin:0 5px;}
+
+.flexcarousel ul.slides li .item.post{ padding:0 0;}
+
+.widgetable{ margin:0 20px 0 0;}
+
+.postbarLeft .widgetable,
+#foliosidebar .widgetable{ margin:0 0 0 20px;}
+
+.foocol{padding: 0 15px 5px;}
+
+#hometab .tab-post img {width: 50px;}
+
+.nav_item a{ width:32%;}
+
+  
+}
+
+@media screen and (max-width: 999px) {
+
+#main-nav > li > a i { display:none;}
+
+#main-nav > li > a, .additional-menu a{font-weight:400 !important;}
+
+}
+
+/*iPad Portrait */
+
+@media screen and (max-width: 770px){
+
+#titles,
+#titles h1{ float:none; text-align:center; width:100% !important;}
+
+#header h1 img {float: none; margin: 0 auto;}
+
+.additional-menu-wrap{ padding-left:0 !important; position:relative; width:100%; text-align:center; display:inline-block;}
+
+.additional-menu {float: none; display:inline-block;}
+	
+.nav a, .bigmenu > ul > li > a, #portfolio-filter a{ font-size:12px !important;}
+
+
+.flexinside h1{font-size:20px !important;}
+
+
+.mp-wrap h3{ font-size:14px !important;}
+
+.mp-wrap p{ font-size:12px !important;}
+
+ul.mp-staff-social li a {
+    font-size: 14px;
+    height: 26px;
+    padding: 6px;
+    width: 26px;
+}
+
+.flexinside { top:15px;}
+
+
+.entry_item p, .entry_item ul {
+    margin: 10px 0;
+}
+
+
+
+.entryhead iframe{ max-height:300px;}
+
+.woocommerce-page ul.products li.product, .woocommerce ul.products li.product {
+    width: 48% !important;
+}
+
+#foliocontent iframe.tmnf-video{ max-height:280px}
+
+h2.block { text-align:center;}
+
+/* mobile menu */
+a#navtrigger,
+a#navtrigger-sec{ display:block !important;}
+
+.navhead{ position:relative;}
+
+#header a.searchSubmit { display: none;}
+
+#navigation{ display:none; position:relative; top:auto; margin:-80px 0 0 0 !important; padding:80px 0 0 0; background-color:#222 !important;-moz-border-radius: 2px;-khtml-border-radius: 2px;-webkit-border-radius: 2px;border-radius: 2px; border-top: none !important; }
+#navigation a{ color:#ddd !important}
+
+#header #main-nav{ width:100% !important; margin:0 0 0 0 !important; padding:0 0 0 0 !important;}
+
+ul#main-nav li,
+#main-nav li ul{ width:100% !important; background-color: transparent !important; border:none !important; float:none; display:block;margin:0 0 0 0 !important; position:relative !important; left:auto !important; display:block !important; visibility:visible !important; }
+
+#navigation #main-nav li ul li > a{ border-bottom:1px dotted #444 !important;}
+
+ul#main-nav li a{ width:100% !important; text-align:left; padding:12px 20px !important; margin:0 0 0 20px;}
+
+#main-nav li a.sf-with-ul {padding-right: 0 !important;}
+
+#main-nav > li > a {margin: 0 0 0 0 !important;}
+
+#main-nav > li > ul > li,
+#main-nav li ul ul li,
+#main-nav li ul li > a,
+#main-nav li ul li > a {max-width: 100% !important;margin:0 0 0 0; padding:0 0 0 0;}
+
+.nav li ul{ padding:0 20px;}
+
+#main-nav li.mega ul.sub-menu { min-height:0px;}
+
+#main-nav li ul ul{ margin:0 0 0 0; padding:0 0 0 0;}
+
+.mega2 .sf-sub-indicator{ display:none;}
+
+div.sub,
+.nav > li > ul:after{ display:none !important;}
+
+.sf-arrows .sf-with-ul::after { right: 15px;}
+
+/* end mobile menu */
+
+
+body {
+width: 100%;
+min-width: 0;
+margin-left: 0px;
+margin-right: 0px;
+padding-left: 0;
+padding-right: 0;
+margin-top:0;
+font-size: 16px;
+-webkit-text-size-adjust: none;
+}
+
+
+.onecol, .twocol, .threecol,.threecol_spec, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol,.fifthcol
+{
+width: auto;
+float: none !important;
+padding-left: 20px;
+padding-right: 20px;
+margin-left: 0;
+margin-right: 0;
+}
+
+.threecol{ min-height:0; border:none !important; padding:20px 0;}
+
+.fourcol{
+padding: 0 !important;
+max-width: 290px;
+float:none;
+margin:0 auto 30px auto;
+}
+
+.sixcol{
+padding: 0 !important;
+float:none;
+margin:0 auto 30px auto;
+}
+
+
+#content{
+	padding-left:0;
+	padding-right:0;
+	margin-top:0;
+}
+
+#sidebar,.foocol{float:none !important; margin:0 auto !important; padding:40px 0 !important; width:100% !important; max-width:305px !important; border: none !important;}
+
+.foocol{padding:5px 0 !important;}
+
+#copyright{ padding:0 5%;}
+
+.pagination{ margin-bottom:40px; height:35px;}
+
+
+
+
+
+
+.entryhead img,
+.blogger .item .imgwrap img,
+.entryhead iframe {max-width: 100% !important; float:none; margin:0 auto;}
+
+.imgwrap{ float:none !important; width:auto !important; max-width:100%; margin:0 auto !important; }
+
+.blogger .item iframe{ max-height:320px;}
+
+
+.flexinside-inn,
+.modern div.post:nth-child(even) .item_inn:before,
+.modern div.post:nth-child(odd) .item_inn:before,
+.meta.cat:after,
+div.tooltip p:after,
+.hrline:after,
+.nav>li>ul:after,
+.sf-arrows .sf-with-ul::after,
+.sf-arrows .sf-with-ul::after,
+.post.format-quote .hrline:after,
+h2.widget:after,
+#portfolio-filter li::after,h2.block .maintitle::after
+{ display:none !important;}
+
+.imgwrap p.meta.counter{ background: none;}
+
+.woocommerce-page div.product div.summary {
+    margin: 0 0 40px 0;
+    width: 100%;
+}
+
+h1.itemtitle{ font-size:25px !important;}
+
+#foliocontent>iframe{ max-height:360px}
+
+.scrollTo_top{ visibility:hidden; display:none}
+
+.tmnf-sc-quote.left,
+.tmnf-sc-quote.right{ width:100%; float:none; margin-left:0; margin-right:0}
+
+
+.contact-form .forms textarea,
+.contact-form .forms input.txt{ width:100%; float:none; margin-left:0; margin-right:0; padding-left:0; padding-right:0}
+
+.contact-form .forms label{ margin-bottom:10px}
+
+.contact-form .forms .buttons .submit,
+.contact-form .forms input#sendCopy{ margin-left:0;}
+
+
+.blocker,
+.homeblog,
+#content,
+#foliosidebar,
+#foliocontent{ width:100%;}
+
+#foliocontent,
+#foliosidebar .widgetable{ margin:0 0 !important;}
+
+.isotope{ max-width:305px; margin: 40px auto 140px auto !important;}
+
+#post-nav img,
+.flexinside p.teaser{ display:none;}
+
+.postauthor{ font-size:90%; line-height:1.5; padding:15px 15px;}
+
+
+h1.entry-title,
+h2.posttitle {font-size:26px !important;}
+
+h2.block,
+h2.archiv,
+.pagination,
+.dividers h2.block{ text-align:center;font-size:30px !important;max-width:305px !important; width:100%; margin-left:auto !important; margin-right: auto !important; margin-bottom:30px;}
+
+.entryhead{ width:100%; overflow:hidden;}
+
+.entryhead iframe{ max-height:250px;} 
+
+.homeblog > .post,
+.archivloop>div{ width:100% !important; padding:0 0 !important; margin:0 auto 20px auto !important; float:none !important; border:none !important;max-width:300px !important; height:auto !important; overflow:hidden;}
+
+
+.blogger div.post .item_inn,
+.entry{ padding:20px 20px !important;}
+
+.widgetwrap-folio{ margin:0 0; width:100%; max-width:100%;}
+
+.blogger a.morebutton,
+.nav-previous a{ float:none; margin:0 auto !important; width:300px;}
+
+.mainflex .ratingbar {bottom: 70px;right: 15px;}
+
+.mainflex{ overflow:hidden;}
+
+.flexinside h2{ font-size:15px !important;}
+
+.blogger .item iframe{ max-height:270px;}
+
+.widgetable {
+    clear: both;
+    display: block;
+    float: none;
+    margin: 0 0 !important;
+    padding: 0;
+}
+
+.aq-block-aq_4_column_block,
+.aq-block-aq_3_column_block,
+.aq-block-aq_2_3_column_block,
+.aq-block-aq_2_column_block{ width:100%; padding:0 20px;max-width:340px !important;margin:0 auto 20px auto !important; float:none;}
+
+.mp-wrap {
+    margin: 0 !important;
+    width: 100% !important;
+}
+
+.page-header h1 {
+    border-left-width: 0;
+    margin: 0 0 20px 0;
+    padding: 0 0 0 0;
+    text-align: center;
+}
+	
+#portfolio-filter li { margin: 0 15px 10px 15px;}
+
+.singleslider{ width:100%; margin:0 0 20px 0;}
+
+.singleslider .flex-caption {
+    font-size: 11px;
+    padding: 0 10px;
+}
+
+h2.block .maintitle {margin-right:0px;}
+	
+h2.block span.subtitle, h2.archiv span{ padding:0 0 0 0;}
+
+.entry {padding: 0 !important;}
+
+#footer .foocol h2{ margin-top:0;}
+	
+}
+
+
+@media only screen and (max-width: 429px) {
+
+#topnav{ min-height:140px;}
+
+#topnav p{ width:100%; border:none;}
+
+#topnav .searchform{ display:none;}
+
+.top-menu{ float:left;}
+
+.top-menu li a{ margin:0 0 !important;}
+
+.additional-menu li{ width:100%; margin-bottom:1px;}
+
+.page-header {padding: 30px 0 10px;}
+
+.page-header h1{ padding:0 20px;}
+
+.flexinside{ padding:10px 0;}
+	
+.flexinside h1{font-size:13px !important; margin:0 0;}
+
+
+h1.entry-title,
+h2.itemtitle,
+h2.block { font-size:22px !important; margin-top:20px;}
+
+h1.entry-title,
+h2.posttitle {font-size:20px !important;}
+
+h2.itemtitle { text-align:center;}
+
+.related li { width:45%; height:220px;}
+
+.comment-form-author,
+.comment-form-email,
+.comment-form-url,
+#post-nav,
+.postauthor{ width:100%;}
+
+#respond textarea{ width:99.5%;}
+
+}

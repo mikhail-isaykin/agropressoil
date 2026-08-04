@@ -1,0 +1,39 @@
+/* theme-dynamic.css — инлайновый «скин» темы из <head> оригинала (Redux + меню) */
+
+li.mp-services .mp-inner,li.mp-services .mp-inner h3,li.mp-services .mp-inner h3 a{color:#000}
+
+.mp-inner i.main,a.mp-more {background-color:#EBEBEB}
+
+.mp-inner i.main,a.mp-more {color:#363636 !important}
+
+.mp-services:hover i.main,a.mp-more:hover {background-color:#7dd1e3}
+
+.mp-services:hover i.main,a.mp-more:hover {color:#FFFFFF!important}
+
+.boxed li.mp-services .mp-inner{background-color:#f9f9f9}
+
+.testi-content,.testi-meta{background-color:#fff}
+
+.mp-testimonials .testi-content:before{border-color: transparent #fff transparent transparent}
+
+img.attachment-testi-thumb{border-color:#eee !important}
+
+.testi-meta h4,.testi-meta h4 a,.testi-meta p,.testi-content{color:#000}
+
+.boxed li.mp-staff .mp-inner{background-color:#f9f9f9}
+
+li.mp-staff h3,li.mp-staff h3 a,li.mp-staff p,.staff-content{color:#222}
+
+ul.mp-staff-social li a{background-color:#333}
+
+ul.mp-staff-social li a{color:#fff !important}
+
+.sf-arrows .sf-with-ul::after{border-color: #ededed transparent transparent;}
+
+	.nav>li>ul:after{border-color:#ededed transparent}
+
+	.additional-menu-wrap{padding-left: 320px}
+
+	.woocommerce #content div.product .woocommerce-tabs ul.tabs{border-color: #ededed !important}
+
+body{font-family:Roboto;line-height:26px;font-weight:400;font-style:normal;color:#444;font-size:14px;}body,#infscr-loading,.nav li ul,.item_inn{background-color:#fff;}.ghost,.imgwrap.ghost,.page-numbers,.nav_item a,.sidewrap ul.menu>li,#sidebar .tab-post{background-color:#f9f9f9;}a{color:#222;}a:hover{color:#DC5252;}a:active{color:#000;}.p-border,.meta,h3#reply-title,.tagcloud a,.page-numbers,input,textarea,select,.products,.nav_item a,.nav li>ul,.nav li ul li>a,.nav li ul ul,.mega2 ul.loop{border-color:#ededed;}#navigation{background-color:#404347;}#main-nav>li>a,.additional-menu a{font-family:"Open Sans";line-height:15px;font-weight:800;font-style:normal;color:#fff;font-size:11px;}.head-ghost{background-color:#404347;}.head-ghost p,.head-ghost p a,#topnav ul.social-menu li a,#topnav .searchform input.s,#topnav .searchSubmit,.top-menu>li>a{color:#ddd;}#header{background-color:#fff;}#header h1 a{color:#000;}.current-menu-item>a,#header a:hover{color:#aaa;}#header,#topnav ul.social-menu li a,#main-nav>li,#topnav p{border-color:#595959;}#titles{width:320px;}#titles{margin-top:20px;margin-bottom:20px;}#footer{font-family:Roboto;line-height:26px;font-weight:400;font-style:normal;color:#aaa;font-size:13px;}#footer,.curtain,#footer .searchform input.s,.sticky{background-color:#404347;}#footer a,#footer h2,#footer h3,#footer #serinfo-nav li a,.curtain,.curtain a,#footer .meta,#footer .meta a,#footer .searchform input.s,.sticky{color:#999999;}#footer a:hover,.sticky a,.sticky .meta,.sticky .meta a{color:#7dd1e3;}.footer-top,#footer .foocol,#copyright,#footer .tagcloud a,#footer .p-border,.curtain ul.social-menu li a,#footer .searchform input.s{border-color:#4e5359;}h1{font-family:Roboto;line-height:32px;font-weight:700;font-style:normal;color:#222;font-size:26px;}h2.taxonomy,h2.block,h2.archiv,h1.entry-title,h2.posttitle,h1.itemtitle,.flexinside h1{font-family:Roboto;line-height:38px;font-weight:700;font-style:normal;color:#222;font-size:32px;}h2,a.morebutton,.sidewrap ul.menu>li>a{font-family:Roboto;line-height:24px;font-weight:700;font-style:normal;color:#222;font-size:20px;}h3,.foliohead .description,.foliohead a.mainbutton{font-family:Roboto;line-height:25px;font-weight:400;font-style:normal;color:#7a7a7a;font-size:20px;}h4,#serinfo-nav li a,a.mainbutton,#portfolio-filter a{font-family:"Open Sans";line-height:16px;font-weight:600;font-style:normal;color:#222;font-size:13px;}h5{font-family:"Open Sans";line-height:20px;font-weight:700;font-style:normal;color:#222;font-size:15px;}h6{font-family:"Open Sans";line-height:25px;font-weight:700;font-style:normal;color:#222;font-size:14px;}.meta,.meta_more,.meta a,.entry p.meta{font-family:Roboto;line-height:14px;font-weight:400;font-style:normal;color:#3d3d3d;font-size:11px;}h2.widget:after,.hrline:after,a.searchSubmit,.ribbon,#main-nav > li.special,.additional-menu li a,.flex-direction-nav a,li.current a,.page-numbers.current,a.mainbutton,a.morebutton,.blogger .format-quote,a.hoverstuff,.products li .button.add_to_cart_button,span.overrating,a.mainbutton,h2.block .maintitle:after,#submit,#comments .navigation a,.tagssingle a,.contact-form .submit,.wpcf7-submit,a.comment-reply-link,.wrapper .wp-review-show-total,.sidewrap ul.menu>li.current-menu-item>a{background-color:#6CB5C5;}.meta_more a,.flexinside p a, .flexinside p a:hover, .flexinside h2 a:hover,#portfolio-filter a.active,#portfolio-filter .current-cat a,#topnav p i{color:#6CB5C5;}.products li .button.add_to_cart_button,.flexinside h1,.folio .item:hover p.meta,.page-header h1,h2.archiv,#main-nav>li.current-menu-item>a,#main-nav>li>a:hover{border-color:#6CB5C5;}a.searchSubmit,a.hoverstuff,.ribbon,.ribbon a,.flex-direction-nav a,#main-nav > li.special a,.additional-menu li a,#hometab li.current a,a.mainbutton,.blogger .format-quote,.blogger .format-quote a,.products li .button.add_to_cart_button,a.mainbutton,a.morebutton,#foliosidebar a.mainbutton,#submit,#comments .navigation a,.tagssingle a,.contact-form .submit,.wpcf7-submit,a.comment-reply-link,.wrapper .wp-review-show-total,.sidewrap ul.menu>li.current-menu-item>a,#footer a.comment-reply-link{color:#ffffff;}a.searchSubmit:hover,a.hoverstuff:hover,.ribbon:hover,a.mainbutton:hover,.additional-menu li a:hover{background-color:#404347;}#header a.searchSubmit:hover,.ribbon:hover,a.hoverstuff:hover,.ribbon a:hover,a.mainbutton:hover,#header .additional-menu li a:hover{color:#ffffff;}.imgwrap{background-color:#111111;}.titlewrap a,.titlewrap h1,.titlewrap p,.flexinside a,.flexinside p,.flexinside p.meta a,.flexcarousel .meta,.flexcarousel .meta a,.flexcarousel.folio .item h2 a,.bloggrid div.post .text_inn a{color:#ffffff;}{border-color:#ffffff;}.page-header{background-color:#f5f5f5;}.page-header h1,.page-header #portfolio-filter a,h2.archiv{color:#222222;}
