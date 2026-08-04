@@ -1,0 +1,318 @@
+/* custom.css — наши правки поверх темы. Грузится последним. */
+
+/* 1. логотип: раньше стилизовался как #header h1 img, но h1 из шапки убран */
+#header .logo img {
+  display: block;
+  float: left;
+  max-width: 100%;
+}
+
+/* 2. подписи слайдера: раньше .flexinside h1, теперь h2 */
+.flexinside h2 {
+  border-left: 15px solid #6cb5c5;
+  padding: 0 50px;
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 32px;
+  line-height: 38px;
+  font-weight: 700;
+}
+
+/* 3. скрытый SEO-h1: есть для поисковика, не виден глазом */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* === Дополнительный CSS из админки WP (<style id="wp-custom-css">) — был упущен при миграции.
+   Перенесён дословно как в оригинале (дубль font-size 16/15 — так в оригинале, 15px побеждает). === */
+.flexinside {
+  background-color: #15191e;
+  opacity: 0.8;
+  font-size: 16px !important;
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+  font-size: 15px !important;
+  float: none;
+  display: block;
+  text-transform: none;
+  /* --- фикс размер блока с текстом --- */
+  width: 450px;
+  height: 325px;
+  overflow: hidden; /* если текст не влезет — обрежется, а не растянет блок */
+}
+
+.text-full {
+  font-size: 16px !important;
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+  font-size: 15px !important;
+  float: none;
+  display: block;
+  text-transform: none;
+}
+
+/* === Глобальный box-sizing ===
+   Оригинал получал его из плагина Extendify: *{box-sizing:border-box!important}.
+   Плагин не подключаем, поэтому повторяем правило вручную — вёрстка темы рассчитана
+   на border-box. Это не костыль, а замена выпавшего плагина. */
+* {
+  box-sizing: border-box !important;
+}
+
+/* === КАСТОМ (моя правка, отличается от оригинала): стрелки слайдера — в левом нижнем углу
+   текстового блока. JS (jquery.flexslider.start.main.js) кладёт .flex-direction-nav внутрь
+   активного .flexinside; здесь пиним блок стрелок в угол, ставим стрелки вплотную и делаем
+   всегда видимыми. left/bottom можно подвинуть, если захочешь небольшой отступ от края. === */
+.flexinside .flex-direction-nav {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: auto;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  z-index: 5;
+}
+.flexinside .flex-direction-nav li {
+  float: left;
+  margin: 0;
+}
+.flexinside .flex-direction-nav li + li {
+  margin-left: 6px; /* небольшое расстояние между кнопками */
+}
+.flexinside .flex-direction-nav a {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  margin: 0 !important;
+  opacity: 1 !important; /* всегда видны, а не только на ховер */
+}
+/* Карточки новостей — фикс размер картинки */
+.homeblog .imgwrap {
+  height: 175px; /* фикс высота рамки */
+  overflow: hidden;
+}
+.homeblog .imgwrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* заполняет рамку, обрезая лишнее по центру */
+  display: block;
+}
+.single-post .entryhead {
+  height: 400px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.single-post .entryhead img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.folio .imgwrap {
+  height: 220px;
+  overflow: hidden;
+}
+.folio .imgwrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+/* ===== Страница «Запасные части» ===== */
+
+/* верхний блок: большая картинка + список деталей */
+.zip-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  align-items: flex-start;
+  margin: 20px 0;
+}
+.zip-top__img {
+  flex: 1 1 45%;
+  min-width: 280px;
+}
+.zip-top__img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.zip-top__list {
+  flex: 1 1 45%;
+  min-width: 260px;
+}
+
+/* сетка карточек 5 в ряд */
+.zip-cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+  margin: 24px 0;
+}
+.zip-card {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #ececec;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+  padding: 12px;
+  text-align: center;
+}
+.zip-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: contain;
+  display: block;
+}
+
+/* всплывающая подпись на карточке */
+.zip-card__caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px 12px;
+  background: rgba(0, 0, 0, 0.72);
+  color: #fff;
+  font-size: 13px;
+  line-height: 1.3;
+  transform: translateY(100%);
+  transition: transform 0.25s ease;
+}
+.zip-card:hover .zip-card__caption {
+  transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+  .zip-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 560px) {
+  .zip-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* ===== Страница «Запасные части» ===== */
+.zip-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  align-items: flex-start;
+  margin: 20px 0;
+}
+.zip-top__img {
+  flex: 1 1 45%;
+  min-width: 280px;
+}
+.zip-top__img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.zip-top__list {
+  flex: 1 1 45%;
+  min-width: 260px;
+}
+.zip-cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+  margin: 24px 0;
+}
+.zip-card {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #ececec;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+  padding: 12px;
+  text-align: center;
+}
+.zip-card__caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px 12px;
+  background: rgba(0, 0, 0, 0.72);
+  color: #fff;
+  font-size: 13px;
+  line-height: 1.3;
+  transform: translateY(100%);
+  transition: transform 0.25s ease;
+}
+.zip-card:hover .zip-card__caption {
+  transform: translateY(0);
+}
+.zip-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: contain;
+  display: block;
+}
+@media (max-width: 900px) {
+  .zip-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 560px) {
+  .zip-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* ===== Страница «Маслопрессы» — карточки 2 в ряд ===== */
+.press-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin: 24px 0;
+}
+.press-card {
+  background: #fff;
+  border: 1px solid #ececec;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+.press-card__imglink {
+  display: block;
+}
+.press-card__img {
+  display: block;
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+.press-card__body {
+  padding: 18px 20px;
+}
+.press-card__cat {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #62a329;
+}
+.press-card__title {
+  margin: 6px 0 0;
+  font-size: 20px;
+  line-height: 1.3;
+}
+.press-card__title a {
+  color: inherit;
+}
+@media (max-width: 640px) {
+  .press-cards {
+    grid-template-columns: 1fr;
+  }
+}
